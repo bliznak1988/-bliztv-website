@@ -16,6 +16,19 @@ const supabase = window.supabase.createClient(
   SUPABASE_KEY
 );
 </script>
+  const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+</script>
+
+<script>
+supabase.from("site_settings").select("*")
+  .then(({ data, error }) => {
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+  });
+</script>
 const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
 const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
 
