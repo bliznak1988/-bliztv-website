@@ -10,6 +10,15 @@ const supabase = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+</script>
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx;
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 
 supabase.from("customers").select("id").limit(1)
   .then(({ data, error }) => {
