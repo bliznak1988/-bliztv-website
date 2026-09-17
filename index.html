@@ -7,7 +7,7 @@
 <script src="https://cdn.jsdelivr.net/…pt>
 <script>
 const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
-const SUPABASE_KEY = "ТУКА_СТАВИ_ГО_TВОЈОТ_PUBLISHABLE_KEY";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
 
 const supabase = window.supabase.createClient(
   SUPABASE_URL,
@@ -19,7 +19,6 @@ const supabase = window.supabase.createClient(
   SUPABASE_KEY
 );
 </script>
-
 <script>
 supabase.from("site_settings").select("*")
   .then(({ data, error }) => {
