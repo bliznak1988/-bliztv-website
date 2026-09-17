@@ -5,6 +5,10 @@
 const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
 const SUPABASE_KEY = "https://noyvamodeyshwnpssvpf.supabase.co/rest/v1/
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+supabase.from("customers").select("id").limit(1)
+  .then(({ data, error }) => {
+    console.log("Supabase test:", data, error);
+  });
 </script> 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
