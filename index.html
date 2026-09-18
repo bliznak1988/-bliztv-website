@@ -3,954 +3,1167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#030711">
-
-<title>BlizTv – Live TV, Movies & Series</title>
+<meta name="description" content="BlizTv - Live TV, Movies, Series and Sports">
+<title>BlizTv — Your TV. Your World.</title>
 
 <style>
+:root{
+  --bg:#020b18;
+  --panel:#061426;
+  --line:#0b4661;
+  --cyan:#00eaff;
+  --green:#00ff68;
+  --text:#f4f8ff;
+  --muted:#b8c5d5;
+}
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#030711;
-    color:#fff;
-    line-height:1.6;
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 78% 20%,rgba(0,115,255,.18),transparent 35%),
+    radial-gradient(circle at 25% 35%,rgba(0,255,170,.08),transparent 28%),
+    var(--bg);
+  font-family:Arial,Helvetica,sans-serif;
 }
 
-/* HEADER */
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(calc(100% - 34px),1000px);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
+  height:64px;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(2,11,24,.95);
+  border-bottom:1px solid rgba(0,234,255,.12);
+  backdrop-filter:blur(12px);
+}
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:12px 6%;
-
-    background:rgba(3,7,17,0.94);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid #12343b;
+.nav{
+  height:64px;
+  display:flex;
+  align-items:center;
+  gap:28px;
 }
 
 .logo{
-    height:65px;
-    width:auto;
-    object-fit:contain;
+  font-weight:1000;
+  font-style:italic;
+  line-height:.75;
+  font-size:22px;
+  letter-spacing:-2px;
+  width:105px;
+  text-shadow:0 0 10px rgba(0,255,255,.7);
+}
+
+.logo span:nth-child(1){
+  color:#20eaff;
+}
+
+.logo span:nth-child(2),
+.logo span:nth-child(3){
+  color:#00ff55;
+}
+
+.logo small{
+  display:block;
+  color:#19f5f5;
+  font-size:12px;
+  letter-spacing:0;
+  margin-left:16px;
 }
 
 nav{
-    display:flex;
-    gap:30px;
+  display:flex;
+  align-items:center;
+  gap:27px;
+  flex:1;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.2s;
+  font-size:12px;
+  font-weight:700;
+  color:#d9e5f3;
+  padding:22px 0;
 }
 
+nav a.active,
 nav a:hover{
-    color:#18e6a0;
+  color:#00ffbd;
+  border-bottom:2px solid #00ffbd;
 }
 
-/* HERO */
+.wa{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:1px solid var(--green);
+  border-radius:28px;
+  padding:10px 20px;
+  color:#fff;
+  font-weight:800;
+  font-size:12px;
+}
+
+.wa:hover{
+  background:rgba(0,255,104,.1);
+}
+
+/* ================= HERO ================= */
 
 .hero{
-    min-height:700px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:80px 20px;
-
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(0,230,170,0.18),
-        transparent 35%
-    ),
-    radial-gradient(
-        circle at 80% 70%,
-        rgba(24,174,230,0.15),
-        transparent 30%
-    ),
-    #030711;
-}
-
-.hero-content{
-    max-width:900px;
-}
-
-.hero-logo{
-    width:min(430px,80vw);
-    margin-bottom:25px;
-
-    filter:
-    drop-shadow(0 0 20px rgba(24,230,160,0.25));
-}
-
-.hero h1{
-    font-size:60px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#18e6a0;
-}
-
-.hero-text{
-    font-size:22px;
-    color:#c0ced1;
-    margin-bottom:10px;
-}
-
-.hero-sub{
-    color:#8fa3a7;
-    margin-bottom:35px;
-}
-
-/* BUTTON */
-
-.btn{
-    display:inline-block;
-
-    padding:16px 30px;
-
-    border-radius:40px;
-
-    background:
+  min-height:430px;
+  display:grid;
+  grid-template-columns:43% 57%;
+  align-items:center;
+  background:
     linear-gradient(
-        90deg,
-        #18e6a0,
-        #18aee6
+      90deg,
+      rgba(2,11,24,.95) 0%,
+      rgba(2,18,38,.82) 44%,
+      rgba(0,55,110,.36)
+    ),
+    radial-gradient(
+      circle at 75% 45%,
+      #075aa3,
+      transparent 42%
     );
-
-    color:#001014;
-
-    text-decoration:none;
-
-    font-weight:800;
-
-    box-shadow:
-    0 8px 30px rgba(24,230,160,0.20);
-
-    transition:0.25s;
+  border-bottom:1px solid rgba(0,234,255,.08);
+  overflow:hidden;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 12px 40px rgba(24,230,160,0.35);
+.hero-copy{
+  padding:42px 0;
 }
 
-/* SECTIONS */
+.big-logo{
+  font-weight:1000;
+  font-style:italic;
+  line-height:.72;
+  font-size:70px;
+  letter-spacing:-7px;
+  width:max-content;
+  color:#10ecff;
+  text-shadow:
+    0 0 9px #00eaff,
+    0 0 28px rgba(0,255,100,.28);
+  margin-bottom:26px;
+}
+
+.big-logo .g{
+  color:#16ff3d;
+}
+
+h1{
+  font-size:36px;
+  line-height:.98;
+  margin:0 0 9px;
+  letter-spacing:-1.5px;
+}
+
+h1 span{
+  color:#00ff75;
+}
+
+.tagline{
+  font-size:17px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.tagline span{
+  color:#00f6a8;
+}
+
+.hero p{
+  font-size:14px;
+  line-height:1.5;
+  color:#e3ebf6;
+  margin:0 0 20px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  background:linear-gradient(90deg,#08b8ff,#00ff63);
+  color:#fff;
+  padding:13px 23px;
+  border-radius:28px;
+  font-weight:900;
+  font-size:13px;
+}
+
+/* ================= TV ================= */
+
+.hero-visual{
+  position:relative;
+  min-height:430px;
+}
+
+.tv{
+  position:absolute;
+  right:0;
+  top:45px;
+  width:95%;
+  height:280px;
+  border:8px solid #09101b;
+  border-radius:2px;
+  background:linear-gradient(135deg,#071d37,#020914);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.65),
+    0 0 45px rgba(0,130,255,.16);
+  padding:24px;
+}
+
+.screen-nav{
+  display:flex;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.screen-btn{
+  flex:1;
+  background:#071c35;
+  border:1px solid rgba(0,234,255,.12);
+  padding:10px 4px;
+  text-align:center;
+  border-radius:5px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.screen-btn.active{
+  border-color:#00eaff;
+  box-shadow:0 0 12px rgba(0,234,255,.15);
+}
+
+.screen-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+}
+
+.poster{
+  height:110px;
+  border-radius:4px;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:8px;
+  font-size:12px;
+  font-weight:900;
+  background:linear-gradient(145deg,#142e53,#7a1b16 48%,#050a12);
+  text-shadow:0 2px 4px #000;
+}
+
+.poster:nth-child(2){
+  background:linear-gradient(145deg,#1a202b,#47545d,#080b11);
+}
+
+.poster:nth-child(3){
+  background:linear-gradient(145deg,#26142e,#6c1b55,#071016);
+}
+
+.poster:nth-child(4){
+  background:linear-gradient(145deg,#092c55,#2364a4,#05101c);
+}
+
+/* ================= DEVICES ================= */
+
+.devices{
+  position:absolute;
+  right:12%;
+  bottom:6px;
+  display:flex;
+  align-items:end;
+  gap:10px;
+}
+
+.device{
+  background:#071321;
+  border:3px solid #17283c;
+  border-radius:7px;
+  box-shadow:0 8px 20px #000;
+}
+
+.laptop{
+  width:180px;
+  height:95px;
+}
+
+.tablet{
+  width:100px;
+  height:72px;
+}
+
+.phone{
+  width:48px;
+  height:82px;
+}
+
+.device-screen{
+  margin:7px;
+  height:calc(100% - 14px);
+  border-radius:3px;
+  background:linear-gradient(135deg,#102f52,#051326);
+  padding:7px;
+}
+
+.mini{
+  height:9px;
+  background:#123d67;
+  margin-bottom:5px;
+  border-radius:3px;
+}
+
+.mini.w{
+  width:72%;
+}
+
+/* ================= SECTIONS ================= */
 
 section{
-    padding:80px 6%;
-    text-align:center;
+  padding:18px 0;
 }
 
-section h2{
-    font-size:40px;
-    margin-bottom:45px;
+.section-title{
+  text-align:center;
+  font-size:26px;
+  margin:0 0 18px;
 }
 
-/* CARDS */
-
-.cards{
-    max-width:1150px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:22px;
+.section-title span{
+  color:#00ff9d;
 }
 
-.card{
-    padding:30px 22px;
+/* ================= FEATURES ================= */
 
-    background:
-    linear-gradient(
-        180deg,
-        #0b1b20,
-        #071217
-    );
-
-    border:1px solid #16424a;
-
-    border-radius:20px;
-
-    transition:0.25s;
+.features{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  border-bottom:1px solid rgba(120,180,220,.15);
+  padding-bottom:18px;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-
-    border-color:#18e6a0;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.3);
+.feature{
+  text-align:center;
+  padding:4px 12px;
+  border-right:1px solid rgba(100,180,220,.18);
 }
 
-.card-icon{
-    font-size:40px;
-    margin-bottom:15px;
+.feature:last-child{
+  border:0;
 }
 
-.card h3{
-    color:#18e6a0;
-    margin-bottom:10px;
+.icon{
+  font-size:27px;
+  margin-bottom:7px;
+  color:#00f5d4;
 }
 
-.card p{
-    color:#aebfc2;
+.feature h3{
+  font-size:13px;
+  margin:0 0 8px;
 }
 
-/* PLANS */
+.feature p{
+  font-size:11px;
+  line-height:1.4;
+  color:#d3dce8;
+  margin:0;
+}
+
+/* ================= CONTENT ================= */
+
+.content-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.content-card{
+  height:115px;
+  border:1px solid #15536d;
+  border-radius:7px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg,#103b5e,#061322 65%);
+}
+
+.content-card:nth-child(2){
+  background:linear-gradient(135deg,#26303e,#71231d,#0b1621);
+}
+
+.content-card:nth-child(3){
+  background:linear-gradient(135deg,#2b3440,#121c29,#5d2d27);
+}
+
+.content-card:nth-child(4){
+  background:linear-gradient(135deg,#082c52,#0c1725);
+}
+
+.content-card .art{
+  font-size:27px;
+  font-weight:1000;
+  padding:18px 12px;
+  text-shadow:0 2px 6px #000;
+}
+
+.pill{
+  position:absolute;
+  bottom:0;
+  left:10%;
+  width:80%;
+  background:linear-gradient(90deg,#067cff,#00ff61);
+  border-radius:18px;
+  text-align:center;
+  padding:7px;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* ================= PLANS ================= */
 
 .plans{
-    max-width:1100px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .plan{
-    padding:35px 25px;
-
-    background:
-    linear-gradient(
-        180deg,
-        #0b1b20,
-        #071217
-    );
-
-    border:1px solid #16424a;
-
-    border-radius:22px;
+  border:1px solid #16829a;
+  border-radius:9px;
+  padding:12px 20px 13px;
+  background:linear-gradient(
+    145deg,
+    rgba(3,20,38,.9),
+    rgba(2,10,23,.85)
+  );
+  text-align:center;
 }
 
 .plan h3{
-    font-size:28px;
-    color:#18e6a0;
+  margin:0;
+  color:#00ff9f;
+  font-size:20px;
 }
 
-.plan-price{
-    font-size:25px;
-    font-weight:bold;
-
-    margin:20px 0;
+.plan .price{
+  font-size:14px;
+  font-weight:800;
+  margin:4px 0 10px;
 }
 
 .plan ul{
-    list-style:none;
-
-    color:#b9c9cc;
-
-    margin-bottom:25px;
+  list-style:none;
+  text-align:left;
+  margin:0 0 11px;
+  padding:0;
+  font-size:12px;
+  line-height:1.9;
 }
 
-.plan li{
-    margin:8px 0;
+.plan li:before{
+  content:"✓";
+  color:#00ff67;
+  font-weight:900;
+  margin-right:9px;
 }
 
-/* RESELLER */
+.order{
+  display:block;
+  background:linear-gradient(90deg,#09baff,#00f45e);
+  border-radius:22px;
+  padding:11px;
+  font-size:11px;
+  font-weight:900;
+}
+
+/* ================= RESELLER + FAQ ================= */
+
+.bottom-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:5px;
+}
 
 .reseller{
-    background:
-    radial-gradient(
-        circle at center,
-        rgba(24,174,230,0.12),
-        transparent 60%
-    );
+  min-height:160px;
+  border:1px solid #0d4661;
+  border-radius:9px;
+  padding:20px 26px;
+  background:linear-gradient(
+    135deg,
+    #061a2c,
+    #061020 58%,
+    #07334b
+  );
+}
+
+.reseller h2{
+  color:#00ff9f;
+  font-size:21px;
+  margin:0 0 8px;
 }
 
 .reseller p{
-    max-width:700px;
-
-    margin:
-    0 auto 30px;
-
-    color:#b9c9cc;
+  font-size:12px;
+  line-height:1.45;
+  margin:0 0 12px;
+  max-width:330px;
 }
 
-/* FAQ */
-
-.faq{
-    max-width:850px;
-
-    margin:auto;
-
-    text-align:left;
+.faq h2{
+  font-size:18px;
+  margin:0 0 8px;
 }
 
 .faq-item{
-    background:#0b1b20;
-
-    border:1px solid #16424a;
-
-    margin:12px 0;
-
-    padding:22px;
-
-    border-radius:15px;
+  background:#071a2e;
+  border:1px solid #123955;
+  padding:10px 12px;
+  margin:4px 0;
+  font-size:11px;
+  font-weight:700;
+  display:flex;
+  justify-content:space-between;
 }
 
-.faq-item h3{
-    color:#18e6a0;
-
-    margin-bottom:8px;
-}
-
-.faq-item p{
-    color:#b9c9cc;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#050c12;
-}
-
-.contact-number{
-    font-size:25px;
-
-    font-weight:bold;
-
-    margin-bottom:25px;
-
-    color:#18e6a0;
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    padding:40px 20px;
-
-    text-align:center;
-
-    color:#82979b;
-
-    border-top:1px solid #12343b;
+  border-top:1px solid rgba(0,234,255,.12);
+  padding:16px 0;
+  color:#d8e1ed;
+  font-size:11px;
 }
 
-footer strong{
-    color:#18e6a0;
+footer .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* WHATSAPP */
-
-.whatsapp{
-    position:fixed;
-
-    right:20px;
-    bottom:20px;
-
-    z-index:2000;
-
-    background:#18d978;
-
-    color:white;
-
-    padding:14px 20px;
-
-    border-radius:40px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    box-shadow:
-    0 8px 25px rgba(24,217,120,0.30);
+.footer-wa{
+  color:#00ff7b;
+  font-weight:800;
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
-@media(max-width:700px){
+@media(max-width:850px){
 
-    header{
-        padding:10px 18px;
-    }
+  nav{
+    gap:13px;
+  }
 
-    .logo{
-        height:52px;
-    }
+  .nav{
+    gap:10px;
+  }
 
-    nav{
-        display:none;
-    }
+  .wa{
+    padding:8px 11px;
+  }
 
-    .hero{
-        min-height:650px;
-        padding:60px 18px;
-    }
+  .hero{
+    grid-template-columns:1fr;
+  }
 
-    .hero h1{
-        font-size:40px;
-    }
+  .hero-copy{
+    padding:35px 0 15px;
+  }
 
-    .hero-text{
-        font-size:18px;
-    }
+  .hero-visual{
+    min-height:350px;
+  }
 
-    section{
-        padding:60px 18px;
-    }
+  .tv{
+    left:4%;
+    right:4%;
+    width:92%;
+    top:10px;
+    height:235px;
+  }
 
-    section h2{
-        font-size:32px;
-    }
+  .poster{
+    height:85px;
+  }
 
-    .whatsapp{
-        right:12px;
-        bottom:12px;
+  .big-logo{
+    font-size:58px;
+  }
 
-        padding:12px 16px;
+  .features{
+    grid-template-columns:repeat(3,1fr);
+  }
 
-        font-size:14px;
-    }
+  .feature:nth-child(3){
+    border:0;
+  }
 
+  .content-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .plans{
+    grid-template-columns:1fr;
+  }
+
+  .bottom-grid{
+    grid-template-columns:1fr;
+  }
 }
 
+/* ================= MOBILE ================= */
+
+@media(max-width:620px){
+
+  header{
+    height:auto;
+  }
+
+  .nav{
+    height:auto;
+    padding:10px 0;
+    flex-wrap:wrap;
+  }
+
+  .logo{
+    width:75px;
+  }
+
+  nav{
+    order:3;
+    width:100%;
+    overflow:auto;
+    gap:19px;
+  }
+
+  nav a{
+    padding:8px 0;
+    white-space:nowrap;
+  }
+
+  .nav>.wa{
+    margin-left:auto;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-visual{
+    min-height:260px;
+  }
+
+  .tv{
+    height:175px;
+    padding:10px;
+  }
+
+  .poster{
+    height:62px;
+    font-size:8px;
+  }
+
+  .screen-btn{
+    font-size:7px;
+  }
+
+  .devices{
+    display:none;
+  }
+
+  .big-logo{
+    font-size:49px;
+  }
+
+  .hero h1{
+    font-size:31px;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature{
+    border-bottom:1px solid rgba(100,180,220,.15);
+  }
+
+  .content-grid{
+    gap:10px;
+  }
+
+  footer .container{
+    gap:10px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
 </style>
 </head>
 
 <body>
 
-
-<!-- ========================= -->
-<!-- HEADER -->
-<!-- ========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
+<div class="container nav">
 
-    <a href="#home">
+<a class="logo" href="#home">
+  <span>BLIZ</span><br>
+  <span>BLIZ</span>
+  <small>TV</small>
+</a>
 
-        <img
-            src="logo.jpg"
-            class="logo"
-            alt="BlizTv Logo"
-        >
+<nav>
+  <a class="active" href="#home">Home</a>
+  <a href="#channels">Channels</a>
+  <a href="#movies">Movies</a>
+  <a href="#series">Series</a>
+  <a href="#plans">Plans</a>
+  <a href="#reseller">Reseller</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    </a>
+<a class="wa"
+href="https://wa.me/…00"
+target="_blank">
+◉ &nbsp; Chat on WhatsApp
+</a>
 
-    <nav>
-
-        <a href="#home">Home</a>
-
-        <a href="#features">Features</a>
-
-        <a href="#plans">Plans</a>
-
-        <a href="#reseller">Reseller</a>
-
-        <a href="#faq">FAQ</a>
-
-        <a href="#contact">Contact</a>
-
-    </nav>
-
+</div>
 </header>
 
 
-<!-- ========================= -->
-<!-- HERO -->
-<!-- ========================= -->
+<!-- ================= HERO ================= -->
 
-<section class="hero" id="home">
+<main id="home">
 
-    <div class="hero-content">
+<section class="hero">
 
-        <img
-            src="logo.jpg"
-            class="hero-logo"
-            alt="BlizTv"
-        >
+<div class="container hero-copy">
 
-        <h1>
-            Your TV.
-            <span>Your World.</span>
-        </h1>
+<div class="big-logo">
+  <span>BLIZ</span><br>
+  <span class="g">BLIZ</span><br>
+  <span class="g">TV</span>
+</div>
 
-        <p class="hero-text">
-            Live TV • Movies • Series • Entertainment
-        </p>
+<h1>
+Your TV.<br>
+<span>Your World.</span>
+</h1>
 
-        <p class="hero-sub">
-            Enjoy your entertainment on Smart TV,
-            iPhone, Android, PC and more.
-        </p>
+<div class="tagline">
+<span>Live TV</span> • Movies • Series • Entertainment
+</div>
 
-        <a
-            class="btn"
-            href="https://wa.me/…t."
-        >
-            GET 24H FREE TEST
-        </a>
+<p>
+Enjoy your <strong style="color:#00ff7b">entertainment</strong>
+on Smart TV,<br>
+iPhone, Android, PC and more.
+</p>
 
-    </div>
+<a class="hero-btn"
+href="https://wa.me/…00"
+target="_blank">
+◉ &nbsp; Chat on WhatsApp &nbsp;›
+</a>
 
-</section>
+</div>
 
 
-<!-- ========================= -->
-<!-- FEATURES -->
-<!-- ========================= -->
+<div class="hero-visual">
 
-<section id="features">
+<div class="tv">
 
-    <h2>
-        Why BlizTv?
-    </h2>
+<div class="screen-nav">
 
-    <div class="cards">
+<div class="screen-btn active">
+📺<br>Live TV
+</div>
 
+<div class="screen-btn">
+🎬<br>Movies
+</div>
 
-        <div class="card">
+<div class="screen-btn">
+🎞️<br>Series
+</div>
 
-            <div class="card-icon">
-                📺
-            </div>
+<div class="screen-btn">
+⚽<br>Sports
+</div>
 
-            <h3>
-                Live TV
-            </h3>
-
-            <p>
-                Enjoy live television wherever
-                you are.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="screen-grid">
 
-            <div class="card-icon">
-                🎬
-            </div>
+<div class="poster">
+THE<br>BATMAN
+</div>
 
-            <h3>
-                Movies & Series
-            </h3>
+<div class="poster">
+GAME OF<br>THRONES
+</div>
 
-            <p>
-                Enjoy movies and series
-                for the whole family.
-            </p>
+<div class="poster">
+STRANGER<br>THINGS
+</div>
 
-        </div>
+<div class="poster">
+⚽ SPORTS
+</div>
 
+</div>
 
-        <div class="card">
-
-            <div class="card-icon">
-                📱
-            </div>
-
-            <h3>
-                Multi Device
-            </h3>
-
-            <p>
-                Smart TV, iPhone, Android,
-                PC and TV Box.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="devices">
 
-            <div class="card-icon">
-                ⚡
-            </div>
+<div class="device laptop">
+<div class="device-screen">
+<div class="mini w"></div>
+<div class="mini"></div>
+<div class="mini w"></div>
+</div>
+</div>
 
-            <h3>
-                High Quality
-            </h3>
+<div class="device tablet">
+<div class="device-screen">
+<div class="mini w"></div>
+<div class="mini"></div>
+</div>
+</div>
 
-            <p>
-                HD, FHD and UHD quality
-                where available.
-            </p>
+<div class="device phone">
+<div class="device-screen">
+<div class="mini"></div>
+<div class="mini w"></div>
+</div>
+</div>
 
-        </div>
+</div>
 
-
-        <div class="card">
-
-            <div class="card-icon">
-                💬
-            </div>
-
-            <h3>
-                Support
-            </h3>
-
-            <p>
-                Contact us whenever
-                you need assistance.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔧
-            </div>
-
-            <h3>
-                Easy Setup
-            </h3>
-
-            <p>
-                Simple installation
-                and fast activation.
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ========================= -->
-<!-- PLANS -->
-<!-- ========================= -->
+<!-- ================= WHY BLIZTV ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Why <span>BlizTv?</span>
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<div class="icon">📺</div>
+<h3>Live TV</h3>
+<p>Enjoy live television wherever you are.</p>
+</div>
+
+<div class="feature">
+<div class="icon">🎬</div>
+<h3>Movies & Series</h3>
+<p>Entertainment for the whole family.</p>
+</div>
+
+<div class="feature">
+<div class="icon">▣</div>
+<h3>Multi Device</h3>
+<p>Smart TV, iPhone, Android, PC and more.</p>
+</div>
+
+<div class="feature">
+<div class="icon">HD</div>
+<h3>High Quality</h3>
+<p>HD, FHD and UHD quality where available.</p>
+</div>
+
+<div class="feature">
+<div class="icon">♧</div>
+<h3>24/7 Support</h3>
+<p>We are available whenever you need help.</p>
+</div>
+
+<div class="feature">
+<div class="icon">⚙</div>
+<h3>Easy Setup</h3>
+<p>Simple installation and fast activation.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTENT ================= -->
+
+<section id="channels">
+
+<div class="container">
+
+<h2 class="section-title">
+Explore <span>Our Content</span>
+</h2>
+
+<div class="content-grid">
+
+<a class="content-card" href="#channels">
+<div class="art">
+⚽ LIVE<br>SPORTS
+</div>
+<div class="pill">
+📺 &nbsp; Live TV
+</div>
+</a>
+
+
+<a class="content-card" id="movies" href="#plans">
+<div class="art">
+🎬 MOVIES
+</div>
+<div class="pill">
+🎬 &nbsp; Movies
+</div>
+</a>
+
+
+<a class="content-card" id="series" href="#plans">
+<div class="art">
+🎞️ SERIES
+</div>
+<div class="pill">
+🎞️ &nbsp; Series
+</div>
+</a>
+
+
+<a class="content-card" href="#channels">
+<div class="art">
+🏟️ SPORTS
+</div>
+<div class="pill">
+🌐 &nbsp; Sports
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PLANS ================= -->
 
 <section id="plans">
 
-    <h2>
-        Choose Your Plan
-    </h2>
+<div class="container">
 
-    <div class="cards plans">
+<h2 class="section-title">
+Choose <span>Your Plan</span>
+</h2>
 
+<div class="plans">
 
-        <!-- 1 MONTH -->
 
-        <div class="plan">
+<div class="plan">
 
-            <h3>
-                1 Month
-            </h3>
+<h3>1 Month</h3>
 
-            <div class="plan-price">
-                Contact us
-            </div>
+<div class="price">
+Contact us
+</div>
 
-            <ul>
+<ul>
+<li>Live TV</li>
+<li>Movies</li>
+<li>Series</li>
+<li>Multi Device</li>
+<li>Support</li>
+</ul>
 
-                <li>✓ Live TV</li>
-
-                <li>✓ Movies</li>
-
-                <li>✓ Series</li>
-
-                <li>✓ Multi Device</li>
-
-                <li>✓ Support</li>
-
-            </ul>
-
-            <a
-                class="btn"
-                href="https://wa.me/…n."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-
-        <!-- 12 MONTHS -->
-
-        <div class="plan">
-
-            <h3>
-                12 Months
-            </h3>
-
-            <div class="plan-price">
-                Contact us
-            </div>
-
-            <ul>
-
-                <li>✓ Live TV</li>
-
-                <li>✓ Movies</li>
-
-                <li>✓ Series</li>
-
-                <li>✓ Multi Device</li>
-
-                <li>✓ Support</li>
-
-            </ul>
-
-            <a
-                class="btn"
-                href="https://wa.me/…n."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-
-        <!-- 24 MONTHS -->
-
-        <div class="plan">
-
-            <h3>
-                24 Months
-            </h3>
-
-            <div class="plan-price">
-                Contact us
-            </div>
-
-            <ul>
-
-                <li>✓ Live TV</li>
-
-                <li>✓ Movies</li>
-
-                <li>✓ Series</li>
-
-                <li>✓ Multi Device</li>
-
-                <li>✓ Support</li>
-
-            </ul>
-
-            <a
-                class="btn"
-                href="https://wa.me/…n."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- ========================= -->
-<!-- RESELLER -->
-<!-- ========================= -->
-
-<section
-    id="reseller"
-    class="reseller"
->
-
-    <h2>
-        Reseller Program
-    </h2>
-
-    <p>
-
-        Interested in becoming a
-        BlizTv reseller?
-
-        Contact us for reseller information
-        and available options.
-
-    </p>
-
-    <a
-        class="btn"
-        href="https://wa.me/…m."
-    >
-
-        BECOME A RESELLER
-
-    </a>
-
-</section>
-
-
-<!-- ========================= -->
-<!-- FAQ -->
-<!-- ========================= -->
-
-<section id="faq">
-
-    <h2>
-        Frequently Asked Questions
-    </h2>
-
-    <div class="faq">
-
-
-        <div class="faq-item">
-
-            <h3>
-                Can I test BlizTv?
-            </h3>
-
-            <p>
-                Yes. Contact us for a
-                free 24-hour test.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                Which devices are supported?
-            </h3>
-
-            <p>
-                Smart TV, iPhone, Android,
-                PC and TV Box are supported.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                How do I order?
-            </h3>
-
-            <p>
-                Click any ORDER button
-                or contact us directly
-                on WhatsApp.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                Do you provide setup help?
-            </h3>
-
-            <p>
-                Yes. Contact us and we can
-                guide you through the setup.
-            </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-            <h3>
-                How can I contact BlizTv?
-            </h3>
-
-            <p>
-                You can contact us directly
-                through WhatsApp.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
-
-<section
-    id="contact"
-    class="contact"
->
-
-    <h2>
-        Contact BlizTv
-    </h2>
-
-    <div class="contact-number">
-
-        +420 776 282 242
-
-    </div>
-
-    <a
-        class="btn"
-        href="https://wa.me/…n."
-    >
-
-        CONTACT US ON WHATSAPP
-
-    </a>
-
-</section>
-
-
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
-<footer>
-
-    <p>
-        © 2026
-        <strong>BlizTv</strong>.
-        All rights reserved.
-    </p>
-
-    <p>
-        WhatsApp:
-        +420 776 282 242
-    </p>
-
-</footer>
-
-
-<!-- ========================= -->
-<!-- FLOATING WHATSAPP -->
-<!-- ========================= -->
-
-<a
-    class="whatsapp"
-    href="https://wa.me/…p."
->
-    💬 WhatsApp
+<a class="order"
+href="https://wa.me/…0">
+◉ &nbsp; ORDER ON WHATSAPP
 </a>
 
+</div>
+
+
+<div class="plan">
+
+<h3>12 Months</h3>
+
+<div class="price">
+Contact us
+</div>
+
+<ul>
+<li>Live TV</li>
+<li>Movies</li>
+<li>Series</li>
+<li>Multi Device</li>
+<li>Support</li>
+</ul>
+
+<a class="order"
+href="https://wa.me/…0">
+◉ &nbsp; ORDER ON WHATSAPP
+</a>
+
+</div>
+
+
+<div class="plan">
+
+<h3>24 Months</h3>
+
+<div class="price">
+Contact us
+</div>
+
+<ul>
+<li>Live TV</li>
+<li>Movies</li>
+<li>Series</li>
+<li>Multi Device</li>
+<li>Support</li>
+</ul>
+
+<a class="order"
+href="https://wa.me/…0">
+◉ &nbsp; ORDER ON WHATSAPP
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= RESELLER + FAQ ================= -->
+
+<section id="reseller">
+
+<div class="container bottom-grid">
+
+
+<div class="reseller">
+
+<h2>
+👥 &nbsp; Reseller Program
+</h2>
+
+<p>
+Interested in becoming a BlizTv reseller?
+<br>
+Contact us for reseller information
+and available options.
+</p>
+
+<a class="wa"
+href="https://wa.me/…00"
+target="_blank">
+◉ &nbsp; Chat on WhatsApp
+</a>
+
+</div>
+
+
+<div class="faq" id="faq">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<div class="faq-item">
+Can I test BlizTv?
+<span>+</span>
+</div>
+
+<div class="faq-item">
+Which devices are supported?
+<span>+</span>
+</div>
+
+<div class="faq-item">
+How do I order?
+<span>+</span>
+</div>
+
+<div class="faq-item">
+Do you provide setup help?
+<span>+</span>
+</div>
+
+<div class="faq-item">
+How can I contact BlizTv?
+<span>+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="container">
+
+<span>
+© 2026 BlizTv. All rights reserved.
+</span>
+
+<a class="footer-wa"
+href="https://wa.me/…0">
+◉ &nbsp; Chat on WhatsApp
+</a>
+
+</div>
+
+</footer>
 
 </body>
 </html>
