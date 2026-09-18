@@ -1,604 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/…pt>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+console.log("SUPABASE CONNECTED", supabase);
+</script>
+supabase.from("site_settings").select("*")
+  .then(({ data, error }) => {
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+  });
+</script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+<script>
+console.log("SUPABASE CONNECTED", supabase);
+<script>
+alert("BLIZTV TEST");
+</script>
+</script>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+</script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BlizTv — Your TV. Your World.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlizTv – Live TV, Movies & Series</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-margin:0;background:#020b18;color:#fff;
-font-family:Arial,Helvetica,sans-serif;
+  font-family:Arial,sans-serif;
+  background:#061014;
+  color:white;
+  line-height:1.6;
 }
-a{text-decoration:none;color:inherit}
-.container{width:min(1000px,calc(100% - 34px));margin:auto}
-
 header{
-position:sticky;top:0;z-index:100;
-background:rgba(2,11,24,.96);
-border-bottom:1px solid #12344a;
-backdrop-filter:blur(12px)
-}
-.nav{
-min-height:64px;display:flex;align-items:center;gap:25px
+  padding:22px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #12343b;
 }
 .logo{
-font-size:21px;font-weight:1000;font-style:italic;
-line-height:.72;letter-spacing:-2px;
-color:#12eaff;text-shadow:0 0 12px #00eaff;
-width:100px
+  font-size:30px;
+  font-weight:800;
+  color:#18e6a0;
 }
-.logo b{color:#19ff45}
-.logo small{display:block;margin-left:15px;color:#00eaff;font-size:12px}
-
-nav{display:flex;gap:25px;flex:1}
+.logo span{color:#18aee6}
 nav a{
-font-size:12px;font-weight:bold;padding:23px 0;color:#dce7f4
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
 }
-nav a:hover,nav a.active{
-color:#00ff9d;border-bottom:2px solid #00ff9d
-}
-
-.wa{
-display:inline-block;border:1px solid #00ff68;
-border-radius:30px;padding:10px 19px;
-font-size:12px;font-weight:bold
-}
-.wa:hover{background:#00ff6818}
-
 .hero{
-min-height:430px;
-display:grid;grid-template-columns:44% 56%;
-align-items:center;
-background:
-linear-gradient(90deg,#020b18f5,#031b35c9,#0050a044),
-radial-gradient(circle at 75% 45%,#0867b8,transparent 45%);
-overflow:hidden
+  text-align:center;
+  padding:100px 20px;
+  background:radial-gradient(circle at center,#073b42 0,#061014 65%);
 }
-
-.hero-copy{padding:40px 0}
-
-.big-logo{
-font-size:68px;font-weight:1000;font-style:italic;
-line-height:.72;letter-spacing:-7px;
-color:#10eaff;text-shadow:0 0 10px #00eaff,0 0 30px #00ff6633;
-margin-bottom:27px
+.hero h1{
+  font-size:58px;
+  margin-bottom:20px;
 }
-.big-logo span{color:#17ff45}
-
-h1{font-size:36px;line-height:.98;margin:0 0 10px}
-h1 span{color:#00ff70}
-
-.tagline{font-size:17px;font-weight:bold;margin-bottom:12px}
-.tagline span{color:#00f6a8}
-
-.hero p{font-size:14px;line-height:1.5;margin-bottom:20px}
-
-.hero-btn{
-display:inline-block;
-background:linear-gradient(90deg,#08b8ff,#00ff63);
-padding:13px 23px;border-radius:30px;font-size:13px;font-weight:900
+.hero h1 span{color:#18e6a0}
+.hero p{
+  font-size:21px;
+  color:#b9c9cc;
+  margin-bottom:30px;
 }
-
-.hero-visual{position:relative;min-height:430px}
-
-.tv{
-position:absolute;right:0;top:45px;width:95%;height:280px;
-background:linear-gradient(135deg,#071d37,#020914);
-border:8px solid #090f19;
-padding:24px;
-box-shadow:0 20px 45px #000b,0 0 45px #0080ff29
+.btn{
+  display:inline-block;
+  padding:15px 28px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#18e6a0,#18aee6);
+  color:#001014;
+  font-weight:bold;
+  text-decoration:none;
 }
-
-.screen-nav{display:flex;gap:12px;margin-bottom:14px}
-.screen-btn{
-flex:1;background:#071c35;border:1px solid #17405b;
-padding:10px 3px;text-align:center;border-radius:5px;
-font-size:10px;font-weight:bold
+section{
+  padding:70px 7%;
+  text-align:center;
 }
-.screen-btn.active{border-color:#00eaff;box-shadow:0 0 12px #00eaff33}
-
-.screen-grid{
-display:grid;grid-template-columns:repeat(4,1fr);gap:7px
+h2{
+  font-size:38px;
+  margin-bottom:40px;
 }
-.poster{
-height:110px;border-radius:4px;padding:8px;
-display:flex;align-items:flex-end;
-font-size:12px;font-weight:900;
-background:linear-gradient(145deg,#142e53,#7a1b16,#050a12);
-text-shadow:0 2px 5px #000
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
 }
-.poster:nth-child(2){background:linear-gradient(145deg,#1a202b,#47545d,#080b11)}
-.poster:nth-child(3){background:linear-gradient(145deg,#26142e,#6c1b55,#071016)}
-.poster:nth-child(4){background:linear-gradient(145deg,#092c55,#2364a4,#05101c)}
-
-.devices{
-position:absolute;right:12%;bottom:5px;
-display:flex;align-items:end;gap:10px
+.card{
+  background:#0b1b20;
+  border:1px solid #16424a;
+  border-radius:18px;
+  padding:30px 20px;
 }
-.device{
-background:#071321;border:3px solid #17283c;
-border-radius:7px;box-shadow:0 8px 20px #000
+.card h3{
+  color:#18e6a0;
+  margin-bottom:12px;
 }
-.laptop{width:180px;height:95px}
-.tablet{width:100px;height:72px}
-.phone{width:48px;height:82px}
-.device-screen{
-margin:7px;height:calc(100% - 14px);
-background:linear-gradient(135deg,#102f52,#051326);
-padding:7px
-}
-.mini{height:9px;background:#123d67;margin-bottom:5px}
-.mini.w{width:72%}
-
-section{padding:20px 0}
-.section-title{text-align:center;font-size:27px;margin:0 0 20px}
-.section-title span{color:#00ff9d}
-
-.features{
-display:grid;grid-template-columns:repeat(6,1fr);
-border-bottom:1px solid #163447;padding-bottom:20px
-}
-.feature{text-align:center;padding:5px 12px;border-right:1px solid #173a4d}
-.feature:last-child{border:0}
-.icon{font-size:27px;color:#00f5d4;margin-bottom:7px}
-.feature h3{font-size:13px;margin:0 0 8px}
-.feature p{font-size:11px;line-height:1.4;color:#d3dce8;margin:0}
-
-.content-grid{
-display:grid;grid-template-columns:repeat(4,1fr);gap:20px
-}
-.content-card{
-height:115px;border:1px solid #15536d;border-radius:7px;
-position:relative;overflow:hidden;
-background:linear-gradient(135deg,#103b5e,#061322)
-}
-.content-card:nth-child(2){background:linear-gradient(135deg,#26303e,#71231d,#0b1621)}
-.content-card:nth-child(3){background:linear-gradient(135deg,#2b3440,#121c29,#5d2d27)}
-.content-card:nth-child(4){background:linear-gradient(135deg,#082c52,#0c1725)}
-.art{font-size:27px;font-weight:1000;padding:18px 12px}
-.pill{
-position:absolute;bottom:0;left:10%;width:80%;
-background:linear-gradient(90deg,#067cff,#00ff61);
-border-radius:20px;text-align:center;padding:7px;
-font-size:12px;font-weight:900
-}
-
+.card p{color:#b9c9cc}
 .plans{
-display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+  max-width:1100px;
+  margin:auto;
 }
 .plan{
-border:1px solid #16829a;border-radius:9px;
-padding:13px 20px;
-background:#031323;text-align:center
+  background:#0b1b20;
+  border:1px solid #16424a;
+  border-radius:20px;
+  padding:30px;
 }
-.plan h3{margin:0;color:#00ff9f;font-size:20px}
-.price{font-size:14px;font-weight:bold;margin:5px 0 10px}
-.plan ul{
-list-style:none;text-align:left;padding:0;margin:0 0 12px;
-font-size:12px;line-height:1.9
+.plan h3{font-size:28px;color:#18e6a0}
+.plan strong{
+  display:block;
+  font-size:24px;
+  margin:15px 0;
 }
-.plan li:before{
-content:"✓";color:#00ff67;font-weight:bold;margin-right:9px
+.faq{
+  max-width:800px;
+  margin:auto;
+  text-align:left;
 }
-.order{
-display:block;background:linear-gradient(90deg,#09baff,#00f45e);
-border-radius:22px;padding:11px;font-size:11px;font-weight:900
+.faq div{
+  background:#0b1b20;
+  margin:12px 0;
+  padding:20px;
+  border-radius:12px;
 }
-
-.bottom-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:25px
-}
-.reseller{
-min-height:160px;border:1px solid #0d4661;border-radius:9px;
-padding:20px 26px;
-background:linear-gradient(135deg,#061a2c,#061020,#07334b)
-}
-.reseller h2{color:#00ff9f;font-size:21px;margin:0 0 8px}
-.reseller p{font-size:12px;line-height:1.45;margin-bottom:12px}
-
-.faq h2{font-size:18px;margin:0 0 8px}
-.faq-item{
-background:#071a2e;border:1px solid #123955;
-padding:10px 12px;margin:4px 0;
-font-size:11px;font-weight:bold;
-display:flex;justify-content:space-between
-}
-
 footer{
-border-top:1px solid #12344a;padding:17px 0;font-size:11px
+  padding:40px 20px;
+  text-align:center;
+  color:#82979b;
+  border-top:1px solid #12343b;
 }
-footer .container{
-display:flex;justify-content:space-between;align-items:center
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#18d978;
+  color:white;
+  padding:15px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
-.footer-wa{color:#00ff7b;font-weight:bold}
-
-/* TABLET */
-@media(max-width:850px){
-.nav{gap:10px}
-nav{gap:13px}
-.hero{grid-template-columns:1fr}
-.hero-copy{padding:35px 0 15px}
-.hero-visual{min-height:350px}
-.tv{left:4%;right:4%;width:92%;top:10px;height:235px}
-.poster{height:85px}
-.features{grid-template-columns:repeat(3,1fr)}
-.content-grid{grid-template-columns:repeat(2,1fr)}
-.plans{grid-template-columns:1fr}
-.bottom-grid{grid-template-columns:1fr}
-}
-
-/* MOBILE */
-@media(max-width:620px){
-.nav{flex-wrap:wrap;padding:10px 0}
-.logo{width:75px}
-nav{
-order:3;width:100%;overflow-x:auto;gap:19px
-}
-nav a{padding:8px 0;white-space:nowrap}
-.nav>.wa{margin-left:auto;padding:8px 11px}
-.big-logo{font-size:49px}
-.hero h1{font-size:31px}
-.hero-visual{min-height:260px}
-.tv{height:175px;padding:10px}
-.poster{height:62px;font-size:8px}
-.screen-btn{font-size:7px}
-.devices{display:none}
-.features{grid-template-columns:repeat(2,1fr)}
-.feature{border-bottom:1px solid #163447}
-.content-grid{gap:10px}
-footer .container{
-flex-direction:column;align-items:flex-start;gap:10px
-}
+@media(max-width:600px){
+  .hero h1{font-size:40px}
+  nav{display:none}
 }
 </style>
+<script src="https://cdn.jsdelivr.net/…pt>
+<script src="https://cdn.jsdelivr.net/…pt>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
 </head>
 
 <body>
 
 <header>
-<div class="container nav">
-
-<a class="logo" href="#home">
-BLIZ<br><b>BLIZ</b><small>TV</small>
-</a>
-
-<nav>
-<a class="active" href="#home">Home</a>
-<a href="#channels">Channels</a>
-<a href="#movies">Movies</a>
-<a href="#series">Series</a>
-<a href="#plans">Plans</a>
-<a href="#reseller">Reseller</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<a class="wa" href="https://api.whatsapp.com/send?phone=420776282242" target="_blank">
-◉ &nbsp; Chat on WhatsApp
-</a>
-
-</div>
+  <div class="logo">Bliz<span>Tv</span></div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#plans">Plans</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 </header>
 
-
-<main id="home">
-
 <section class="hero">
-
-<div class="container hero-copy">
-
-<div class="big-logo">
-BLIZ<br>
-<span>BLIZ</span><br>
-<span>TV</span>
-</div>
-
-<h1>Your TV.<br><span>Your World.</span></h1>
-
-<div class="tagline">
-<span>Live TV</span> • Movies • Series • Entertainment
-</div>
-
-<p>
-Enjoy your <strong style="color:#00ff7b">entertainment</strong>
-on Smart TV,<br>
-iPhone, Android, PC and more.
-</p>
-
-<a class="hero-btn"
-href="https://api.whatsapp.com/send?phone=420776282242"
-target="_blank">
-◉ &nbsp; Chat on WhatsApp &nbsp;›
-</a>
-
-</div>
-
-
-<div class="hero-visual">
-
-<div class="tv">
-
-<div class="screen-nav">
-
-<div class="screen-btn active">
-📺<br>Live TV
-</div>
-
-<div class="screen-btn">
-🎬<br>Movies
-</div>
-
-<div class="screen-btn">
-🎞️<br>Series
-</div>
-
-<div class="screen-btn">
-⚽<br>Sports
-</div>
-
-</div>
-
-<div class="screen-grid">
-
-<div class="poster">THE<br>BATMAN</div>
-<div class="poster">GAME OF<br>THRONES</div>
-<div class="poster">STRANGER<br>THINGS</div>
-<div class="poster">⚽ SPORTS</div>
-
-</div>
-</div>
-
-<div class="devices">
-
-<div class="device laptop">
-<div class="device-screen">
-<div class="mini w"></div>
-<div class="mini"></div>
-<div class="mini w"></div>
-</div>
-</div>
-
-<div class="device tablet">
-<div class="device-screen">
-<div class="mini w"></div>
-<div class="mini"></div>
-</div>
-</div>
-
-<div class="device phone">
-<div class="device-screen">
-<div class="mini"></div>
-<div class="mini w"></div>
-</div>
-</div>
-
-</div>
-</div>
-
+  <h1>Your TV. <span>Your World.</span></h1>
+  <p>Live TV • Movies • Series • Entertainment</p>
+  <p>Enjoy your entertainment on Smart TV, iPhone, Android, PC and more.</p>
+  <a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20would%20like%20a%2024h%20free%20test.">
+    GET 24H FREE TEST
+  </a>
 </section>
 
+<section id="features">
+  <h2>Why BlizTv?</h2>
 
-<section>
+  <div class="cards">
+    <div class="card">
+      <h3>📺 Live TV</h3>
+      <p>Enjoy live television wherever you are.</p>
+    </div>
 
-<div class="container">
+    <div class="card">
+      <h3>🎬 Movies & Series</h3>
+      <p>Entertainment for the whole family.</p>
+    </div>
 
-<h2 class="section-title">
-Why <span>BlizTv?</span>
-</h2>
+    <div class="card">
+      <h3>📱 Multi Device</h3>
+      <p>Smart TV, iPhone, Android, PC and TV Box.</p>
+    </div>
 
-<div class="features">
+    <div class="card">
+      <h3>⚡ High Quality</h3>
+      <p>HD, FHD and UHD quality where available.</p>
+    </div>
 
-<div class="feature">
-<div class="icon">📺</div>
-<h3>Live TV</h3>
-<p>Enjoy live television wherever you are.</p>
-</div>
+    <div class="card">
+      <h3>💬 24/7 Support</h3>
+      <p>We are available whenever you need help.</p>
+    </div>
 
-<div class="feature">
-<div class="icon">🎬</div>
-<h3>Movies & Series</h3>
-<p>Entertainment for the whole family.</p>
-</div>
-
-<div class="feature">
-<div class="icon">▣</div>
-<h3>Multi Device</h3>
-<p>Smart TV, iPhone, Android, PC and more.</p>
-</div>
-
-<div class="feature">
-<div class="icon">HD</div>
-<h3>High Quality</h3>
-<p>HD, FHD and UHD quality where available.</p>
-</div>
-
-<div class="feature">
-<div class="icon">♧</div>
-<h3>24/7 Support</h3>
-<p>We are available whenever you need help.</p>
-</div>
-
-<div class="feature">
-<div class="icon">⚙</div>
-<h3>Easy Setup</h3>
-<p>Simple installation and fast activation.</p>
-</div>
-
-</div>
-</div>
+    <div class="card">
+      <h3>🔧 Easy Setup</h3>
+      <p>Simple installation and fast activation.</p>
+    </div>
+  </div>
 </section>
-
-
-<section id="channels">
-
-<div class="container">
-
-<h2 class="section-title">
-Explore <span>Our Content</span>
-</h2>
-
-<div class="content-grid">
-
-<a class="content-card" href="#channels">
-<div class="art">⚽ LIVE<br>SPORTS</div>
-<div class="pill">📺 &nbsp; Live TV</div>
-</a>
-
-<a class="content-card" id="movies" href="#plans">
-<div class="art">🎬 MOVIES</div>
-<div class="pill">🎬 &nbsp; Movies</div>
-</a>
-
-<a class="content-card" id="series" href="#plans">
-<div class="art">🎞️ SERIES</div>
-<div class="pill">🎞️ &nbsp; Series</div>
-</a>
-
-<a class="content-card" href="#channels">
-<div class="art">🏟️ SPORTS</div>
-<div class="pill">🌐 &nbsp; Sports</div>
-</a>
-
-</div>
-</div>
-</section>
-
 
 <section id="plans">
+  <h2>Choose Your Plan</h2>
 
-<div class="container">
+  <div class="cards plans">
+    <div class="plan">
+      <h3>1 Month</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
 
-<h2 class="section-title">
-Choose <span>Your Plan</span>
-</h2>
+    <div class="plan">
+      <h3>12 Months</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
 
-<div class="plans">
-
-<div class="plan">
-<h3>1 Month</h3>
-<div class="price">Contact us</div>
-<ul>
-<li>Live TV</li>
-<li>Movies</li>
-<li>Series</li>
-<li>Multi Device</li>
-<li>Support</li>
-</ul>
-<a class="order" href="https://api.whatsapp.com/send?phone=420776282242">
-◉ &nbsp; ORDER ON WHATSAPP
-</a>
-</div>
-
-
-<div class="plan">
-<h3>12 Months</h3>
-<div class="price">Contact us</div>
-<ul>
-<li>Live TV</li>
-<li>Movies</li>
-<li>Series</li>
-<li>Multi Device</li>
-<li>Support</li>
-</ul>
-<a class="order" href="https://api.whatsapp.com/send?phone=420776282242">
-◉ &nbsp; ORDER ON WHATSAPP
-</a>
-</div>
-
-
-<div class="plan">
-<h3>24 Months</h3>
-<div class="price">Contact us</div>
-<ul>
-<li>Live TV</li>
-<li>Movies</li>
-<li>Series</li>
-<li>Multi Device</li>
-<li>Support</li>
-</ul>
-<a class="order" href="https://api.whatsapp.com/send?phone=420776282242">
-◉ &nbsp; ORDER ON WHATSAPP
-</a>
-</div>
-
-</div>
-</div>
+    <div class="plan">
+      <h3>24 Months</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
+  </div>
 </section>
 
-
-<section id="reseller">
-
-<div class="container bottom-grid">
-
-<div class="reseller">
-
-<h2>👥 &nbsp; Reseller Program</h2>
-
-<p>
-Interested in becoming a BlizTv reseller?
-<br>
-Contact us for reseller information
-and available options.
-</p>
-
-<a class="wa"
-href="https://api.whatsapp.com/send?phone=420776282242"
-target="_blank">
-◉ &nbsp; Chat on WhatsApp
-</a>
-
-</div>
-
-
-<div class="faq" id="faq">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-item">
-Can I test BlizTv? <span>+</span>
-</div>
-
-<div class="faq-item">
-Which devices are supported? <span>+</span>
-</div>
-
-<div class="faq-item">
-How do I order? <span>+</span>
-</div>
-
-<div class="faq-item">
-Do you provide setup help? <span>+</span>
-</div>
-
-<div class="faq-item">
-How can I contact BlizTv? <span>+</span>
-</div>
-
-</div>
-
-</div>
+<section>
+  <h2>Reseller Program</h2>
+  <p style="max-width:700px;margin:0 auto 30px;color:#b9c9cc">
+    Interested in becoming a BlizTv reseller?
+    Contact us for reseller information and available options.
+  </p>
+  <a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%20reseller%20program.">
+    BECOME A RESELLER
+  </a>
 </section>
 
-</main>
+<section id="faq">
+  <h2>FAQ</h2>
 
+  <div class="faq">
+    <div>
+      <h3>Can I test BlizTv?</h3>
+      <p>Yes. Contact us for a free 24-hour test.</p>
+    </div>
 
-<footer id="contact">
-
-<div class="container">
-
-<span>© 2026 BlizTv. All rights reserved.</span>
-
-<a class="footer-wa"
-href="https://api.whatsapp.com/send?phone=420776282242">
-◉ &nbsp; Chat on WhatsApp
-</a>
-
-</div>
-
-</footer>
-
-</body>
-</html>
+    <div>
+      <h3>Which devices are supported?</h
