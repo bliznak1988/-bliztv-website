@@ -5,6 +5,7 @@
 <html lang="en">
 <head>
 <script src="https://cdn.jsdelivr.net/…pt>
+
 <script>
 const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
 const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
@@ -13,13 +14,9 @@ const supabase = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+
+console.log("SUPABASE CONNECTED", supabase);
 </script>
-  const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-</script>
-<script>
 supabase.from("site_settings").select("*")
   .then(({ data, error }) => {
     console.log("DATA:", data);
