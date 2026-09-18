@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BlizTv – Live TV, Movies & Series</title>
-
-<!-- Supabase -->
-<script src="https://cdn.jsdelivr.net/…pt>
-
-<script>
-const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
-const SUPABASE_KEY = "[PUBLISHABLE_KEY]";
-
-const supabase = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-console.log("SUPABASE CONNECTED");
-</script>
 
 <style>
 *{
@@ -44,14 +28,10 @@ header{
   border-bottom:1px solid #12343b;
 }
 
-.logo{
-  font-size:30px;
-  font-weight:800;
-  color:#18e6a0;
-}
-
-.logo span{
-  color:#18aee6;
+.logo-img{
+  height:55px;
+  width:auto;
+  display:block;
 }
 
 nav a{
@@ -82,18 +62,15 @@ nav a{
 .hero p{
   font-size:21px;
   color:#b9c9cc;
-  margin-bottom:30px;
+  margin-bottom:15px;
 }
 
 .btn{
   display:inline-block;
+  margin-top:15px;
   padding:15px 28px;
   border-radius:30px;
-  background:linear-gradient(
-    90deg,
-    #18e6a0,
-    #18aee6
-  );
+  background:linear-gradient(90deg,#18e6a0,#18aee6);
   color:#001014;
   font-weight:bold;
   text-decoration:none;
@@ -111,8 +88,7 @@ h2{
 
 .cards{
   display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:22px;
 }
 
@@ -197,219 +173,197 @@ footer{
     display:none;
   }
 
+  .logo-img{
+    height:45px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">
-    Bliz<span>Tv</span>
-  </div>
+<img
+  src="bliztv-logo.png"
+  alt="BlizTv"
+  class="logo-img"
+>
 
-  <nav>
-    <a href="#features">Features</a>
-    <a href="#plans">Plans</a>
-    <a href="#faq">FAQ</a>
-  </nav>
+<nav>
+<a href="#features">Features</a>
+<a href="#plans">Plans</a>
+<a href="#faq">FAQ</a>
+</nav>
 
 </header>
 
 
 <section class="hero">
 
-  <h1>
-    Your TV. <span>Your World.</span>
-  </h1>
+<h1>
+Your TV. <span>Your World.</span>
+</h1>
 
-  <p>
-    Live TV • Movies • Series • Entertainment
-  </p>
+<p>
+Live TV • Movies • Series • Entertainment
+</p>
 
-  <p>
-    Enjoy your entertainment on Smart TV,
-    iPhone, Android, PC and more.
-  </p>
+<p>
+Enjoy your entertainment on Smart TV, iPhone, Android, PC and more.
+</p>
 
-  <a
-    class="btn"
-    href="https://wa.me/…t."
-  >
-    GET 24H FREE TEST
-  </a>
+<a
+  class="btn"
+  href="https://wa.me/…t."
+>
+GET 24H FREE TEST
+</a>
 
 </section>
 
 
 <section id="features">
 
-  <h2>Why BlizTv?</h2>
+<h2>Why BlizTv?</h2>
 
-  <div class="cards">
+<div class="cards">
 
-    <div class="card">
-      <h3>📺 Live TV</h3>
-      <p>
-        Enjoy live television wherever you are.
-      </p>
-    </div>
+<div class="card">
+<h3>📺 Live TV</h3>
+<p>Enjoy live television wherever you are.</p>
+</div>
 
-    <div class="card">
-      <h3>🎬 Movies & Series</h3>
-      <p>
-        Entertainment for the whole family.
-      </p>
-    </div>
+<div class="card">
+<h3>🎬 Movies & Series</h3>
+<p>Entertainment for the whole family.</p>
+</div>
 
-    <div class="card">
-      <h3>📱 Multi Device</h3>
-      <p>
-        Smart TV, iPhone, Android, PC and TV Box.
-      </p>
-    </div>
+<div class="card">
+<h3>📱 Multi Device</h3>
+<p>Smart TV, iPhone, Android, PC and TV Box.</p>
+</div>
 
-    <div class="card">
-      <h3>⚡ High Quality</h3>
-      <p>
-        HD, FHD and UHD quality where available.
-      </p>
-    </div>
+<div class="card">
+<h3>⚡ High Quality</h3>
+<p>HD, FHD and UHD quality where available.</p>
+</div>
 
-    <div class="card">
-      <h3>💬 24/7 Support</h3>
-      <p>
-        We are available whenever you need help.
-      </p>
-    </div>
+<div class="card">
+<h3>💬 24/7 Support</h3>
+<p>We are available whenever you need help.</p>
+</div>
 
-    <div class="card">
-      <h3>🔧 Easy Setup</h3>
-      <p>
-        Simple installation and fast activation.
-      </p>
-    </div>
+<div class="card">
+<h3>🔧 Easy Setup</h3>
+<p>Simple installation and fast activation.</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 
 <section id="plans">
 
-  <h2>Choose Your Plan</h2>
+<h2>Choose Your Plan</h2>
 
-  <div class="cards plans">
+<div class="cards plans">
 
-    <div class="plan">
+<div class="plan">
+<h3>1 Month</h3>
+<strong>Contact us</strong>
 
-      <h3>1 Month</h3>
-
-      <strong>Contact us</strong>
-
-      <a
-        class="btn"
-        href="https://wa.me/…42"
-      >
-        ORDER
-      </a>
-
-    </div>
+<a
+  class="btn"
+  href="https://wa.me/…n."
+>
+ORDER
+</a>
+</div>
 
 
-    <div class="plan">
+<div class="plan">
+<h3>12 Months</h3>
+<strong>Contact us</strong>
 
-      <h3>12 Months</h3>
-
-      <strong>Contact us</strong>
-
-      <a
-        class="btn"
-        href="https://wa.me/…42"
-      >
-        ORDER
-      </a>
-
-    </div>
+<a
+  class="btn"
+  href="https://wa.me/…n."
+>
+ORDER
+</a>
+</div>
 
 
-    <div class="plan">
+<div class="plan">
+<h3>24 Months</h3>
+<strong>Contact us</strong>
 
-      <h3>24 Months</h3>
+<a
+  class="btn"
+  href="https://wa.me/…n."
+>
+ORDER
+</a>
+</div>
 
-      <strong>Contact us</strong>
-
-      <a
-        class="btn"
-        href="https://wa.me/…42"
-      >
-        ORDER
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
 <section>
 
-  <h2>Reseller Program</h2>
+<h2>Reseller Program</h2>
 
-  <p
-    style="max-width:700px;margin:0 auto 30px;color:#b9c9cc"
-  >
-    Interested in becoming a BlizTv reseller?
-    Contact us for reseller information and available options.
-  </p>
+<p style="max-width:700px;margin:0 auto 30px;color:#b9c9cc">
 
-  <a
-    class="btn"
-    href="https://wa.me/…m."
-  >
-    BECOME A RESELLER
-  </a>
+Interested in becoming a BlizTv reseller?
+Contact us for reseller information and available options.
+
+</p>
+
+<a
+  class="btn"
+  href="https://wa.me/…m."
+>
+BECOME A RESELLER
+</a>
 
 </section>
 
 
 <section id="faq">
 
-  <h2>FAQ</h2>
+<h2>FAQ</h2>
 
-  <div class="faq">
+<div class="faq">
 
-    <div>
-      <h3>Can I test BlizTv?</h3>
-      <p>
-        Yes. Contact us for a free 24-hour test.
-      </p>
-    </div>
+<div>
+<h3>Can I test BlizTv?</h3>
+<p>Yes. Contact us for a free 24-hour test.</p>
+</div>
 
-    <div>
-      <h3>Which devices are supported?</h3>
-      <p>
-        Smart TV, iPhone, Android, PC and TV Box.
-      </p>
-    </div>
+<div>
+<h3>Which devices are supported?</h3>
+<p>Smart TV, iPhone, Android, PC and TV Box.</p>
+</div>
 
-    <div>
-      <h3>Do you offer support?</h3>
-      <p>
-        Yes. Our support is available 24/7.
-      </p>
-    </div>
+<div>
+<h3>Do you offer support?</h3>
+<p>Yes. Our support is available 24/7.</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
 
 <footer>
-  © 2026 BlizTv. All rights reserved.
+
+© 2026 BlizTv. All rights reserved.
+
 </footer>
 
 
@@ -417,7 +371,7 @@ footer{
   class="whatsapp"
   href="https://wa.me/…42"
 >
-  WhatsApp
+WhatsApp
 </a>
 
 </body>
