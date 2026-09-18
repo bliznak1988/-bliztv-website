@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/…pt>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+console.log("SUPABASE CONNECTED", supabase);
+</script>
+supabase.from("site_settings").select("*")
+  .then(({ data, error }) => {
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+  });
+</script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+<script>
+console.log("SUPABASE CONNECTED", supabase);
+<script>
+alert("BLIZTV TEST");
+</script>
+</script>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BlizTv – Live TV, Movies & Series</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:Arial,sans-serif;
   background:#061014;
   color:white;
   line-height:1.6;
 }
-
 header{
   padding:22px 7%;
   display:flex;
@@ -27,47 +61,34 @@ header{
   align-items:center;
   border-bottom:1px solid #12343b;
 }
-
-.logo-img{
-  height:55px;
-  width:auto;
-  display:block;
+.logo{
+  font-size:30px;
+  font-weight:800;
+  color:#18e6a0;
 }
-
+.logo span{color:#18aee6}
 nav a{
   color:white;
   text-decoration:none;
   margin-left:25px;
 }
-
 .hero{
   text-align:center;
   padding:100px 20px;
-  background:radial-gradient(
-    circle at center,
-    #073b42 0,
-    #061014 65%
-  );
+  background:radial-gradient(circle at center,#073b42 0,#061014 65%);
 }
-
 .hero h1{
   font-size:58px;
   margin-bottom:20px;
 }
-
-.hero h1 span{
-  color:#18e6a0;
-}
-
+.hero h1 span{color:#18e6a0}
 .hero p{
   font-size:21px;
   color:#b9c9cc;
-  margin-bottom:15px;
+  margin-bottom:30px;
 }
-
 .btn{
   display:inline-block;
-  margin-top:15px;
   padding:15px 28px;
   border-radius:30px;
   background:linear-gradient(90deg,#18e6a0,#18aee6);
@@ -75,82 +96,63 @@ nav a{
   font-weight:bold;
   text-decoration:none;
 }
-
 section{
   padding:70px 7%;
   text-align:center;
 }
-
 h2{
   font-size:38px;
   margin-bottom:40px;
 }
-
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:22px;
 }
-
 .card{
   background:#0b1b20;
   border:1px solid #16424a;
   border-radius:18px;
   padding:30px 20px;
 }
-
 .card h3{
   color:#18e6a0;
   margin-bottom:12px;
 }
-
-.card p{
-  color:#b9c9cc;
-}
-
+.card p{color:#b9c9cc}
 .plans{
   max-width:1100px;
   margin:auto;
 }
-
 .plan{
   background:#0b1b20;
   border:1px solid #16424a;
   border-radius:20px;
   padding:30px;
 }
-
-.plan h3{
-  font-size:28px;
-  color:#18e6a0;
-}
-
+.plan h3{font-size:28px;color:#18e6a0}
 .plan strong{
   display:block;
   font-size:24px;
   margin:15px 0;
 }
-
 .faq{
   max-width:800px;
   margin:auto;
   text-align:left;
 }
-
 .faq div{
   background:#0b1b20;
   margin:12px 0;
   padding:20px;
   border-radius:12px;
 }
-
 footer{
   padding:40px 20px;
   text-align:center;
   color:#82979b;
   border-top:1px solid #12343b;
 }
-
 .whatsapp{
   position:fixed;
   right:20px;
@@ -162,217 +164,120 @@ footer{
   text-decoration:none;
   font-weight:bold;
 }
-
 @media(max-width:600px){
-
-  .hero h1{
-    font-size:40px;
-  }
-
-  nav{
-    display:none;
-  }
-
-  .logo-img{
-    height:45px;
-  }
+  .hero h1{font-size:40px}
+  nav{display:none}
 }
 </style>
+<script src="https://cdn.jsdelivr.net/…pt>
+<script src="https://cdn.jsdelivr.net/…pt>
+
+<script>
+const SUPABASE_URL = "https://noyvamodeyshwnpssvpf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_dyPJYKKpprqYXdjWnhl6wQ_bz9eVrwx";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
 </head>
 
 <body>
 
 <header>
-
-<img
-  src="bliztv-logo.png"
-  alt="BlizTv"
-  class="logo-img"
->
-
-<nav>
-<a href="#features">Features</a>
-<a href="#plans">Plans</a>
-<a href="#faq">FAQ</a>
-</nav>
-
+  <div class="logo">Bliz<span>Tv</span></div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#plans">Plans</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 </header>
 
-
 <section class="hero">
-
-<h1>
-Your TV. <span>Your World.</span>
-</h1>
-
-<p>
-Live TV • Movies • Series • Entertainment
-</p>
-
-<p>
-Enjoy your entertainment on Smart TV, iPhone, Android, PC and more.
-</p>
-
-<a
-  class="btn"
-  href="https://wa.me/…t."
->
-GET 24H FREE TEST
-</a>
-
+  <h1>Your TV. <span>Your World.</span></h1>
+  <p>Live TV • Movies • Series • Entertainment</p>
+  <p>Enjoy your entertainment on Smart TV, iPhone, Android, PC and more.</p>
+  <a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20would%20like%20a%2024h%20free%20test.">
+    GET 24H FREE TEST
+  </a>
 </section>
-
 
 <section id="features">
+  <h2>Why BlizTv?</h2>
 
-<h2>Why BlizTv?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📺 Live TV</h3>
+      <p>Enjoy live television wherever you are.</p>
+    </div>
 
-<div class="cards">
+    <div class="card">
+      <h3>🎬 Movies & Series</h3>
+      <p>Entertainment for the whole family.</p>
+    </div>
 
-<div class="card">
-<h3>📺 Live TV</h3>
-<p>Enjoy live television wherever you are.</p>
-</div>
+    <div class="card">
+      <h3>📱 Multi Device</h3>
+      <p>Smart TV, iPhone, Android, PC and TV Box.</p>
+    </div>
 
-<div class="card">
-<h3>🎬 Movies & Series</h3>
-<p>Entertainment for the whole family.</p>
-</div>
+    <div class="card">
+      <h3>⚡ High Quality</h3>
+      <p>HD, FHD and UHD quality where available.</p>
+    </div>
 
-<div class="card">
-<h3>📱 Multi Device</h3>
-<p>Smart TV, iPhone, Android, PC and TV Box.</p>
-</div>
+    <div class="card">
+      <h3>💬 24/7 Support</h3>
+      <p>We are available whenever you need help.</p>
+    </div>
 
-<div class="card">
-<h3>⚡ High Quality</h3>
-<p>HD, FHD and UHD quality where available.</p>
-</div>
-
-<div class="card">
-<h3>💬 24/7 Support</h3>
-<p>We are available whenever you need help.</p>
-</div>
-
-<div class="card">
-<h3>🔧 Easy Setup</h3>
-<p>Simple installation and fast activation.</p>
-</div>
-
-</div>
-
+    <div class="card">
+      <h3>🔧 Easy Setup</h3>
+      <p>Simple installation and fast activation.</p>
+    </div>
+  </div>
 </section>
-
 
 <section id="plans">
+  <h2>Choose Your Plan</h2>
 
-<h2>Choose Your Plan</h2>
+  <div class="cards plans">
+    <div class="plan">
+      <h3>1 Month</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
 
-<div class="cards plans">
+    <div class="plan">
+      <h3>12 Months</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
 
-<div class="plan">
-<h3>1 Month</h3>
-<strong>Contact us</strong>
-
-<a
-  class="btn"
-  href="https://wa.me/…n."
->
-ORDER
-</a>
-</div>
-
-
-<div class="plan">
-<h3>12 Months</h3>
-<strong>Contact us</strong>
-
-<a
-  class="btn"
-  href="https://wa.me/…n."
->
-ORDER
-</a>
-</div>
-
-
-<div class="plan">
-<h3>24 Months</h3>
-<strong>Contact us</strong>
-
-<a
-  class="btn"
-  href="https://wa.me/…n."
->
-ORDER
-</a>
-</div>
-
-</div>
-
+    <div class="plan">
+      <h3>24 Months</h3>
+      <strong>Contact us</strong>
+      <a class="btn" href="https://wa.me/420776282242">ORDER</a>
+    </div>
+  </div>
 </section>
-
 
 <section>
-
-<h2>Reseller Program</h2>
-
-<p style="max-width:700px;margin:0 auto 30px;color:#b9c9cc">
-
-Interested in becoming a BlizTv reseller?
-Contact us for reseller information and available options.
-
-</p>
-
-<a
-  class="btn"
-  href="https://wa.me/…m."
->
-BECOME A RESELLER
-</a>
-
+  <h2>Reseller Program</h2>
+  <p style="max-width:700px;margin:0 auto 30px;color:#b9c9cc">
+    Interested in becoming a BlizTv reseller?
+    Contact us for reseller information and available options.
+  </p>
+  <a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%20reseller%20program.">
+    BECOME A RESELLER
+  </a>
 </section>
-
 
 <section id="faq">
+  <h2>FAQ</h2>
 
-<h2>FAQ</h2>
+  <div class="faq">
+    <div>
+      <h3>Can I test BlizTv?</h3>
+      <p>Yes. Contact us for a free 24-hour test.</p>
+    </div>
 
-<div class="faq">
-
-<div>
-<h3>Can I test BlizTv?</h3>
-<p>Yes. Contact us for a free 24-hour test.</p>
-</div>
-
-<div>
-<h3>Which devices are supported?</h3>
-<p>Smart TV, iPhone, Android, PC and TV Box.</p>
-</div>
-
-<div>
-<h3>Do you offer support?</h3>
-<p>Yes. Our support is available 24/7.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-© 2026 BlizTv. All rights reserved.
-
-</footer>
-
-
-<a
-  class="whatsapp"
-  href="https://wa.me/…42"
->
-WhatsApp
-</a>
-
-</body>
-</html>
+    <div>
+      <h3>Which devices are supported?</h
