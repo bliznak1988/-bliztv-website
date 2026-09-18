@@ -677,7 +677,12 @@ chatButton.addEventListener("click", function () {
     }
 
 });
+const sessionId =
+    localStorage.getItem("bliztv_session_id") ||
+    crypto.randomUUID();
 
+localStorage.setItem("bliztv_session_id", sessionId);
+    
 
 /* =====================================
    SEND MESSAGE TO TELEGRAM
