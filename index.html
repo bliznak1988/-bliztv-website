@@ -1,6 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlizTv – Live TV, Movies & Series</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial,sans-serif;
+    background:#061014;
+    color:#fff;
+    line-height:1.6;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    border-bottom:1px solid #12343b;
+}
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#18e6a0;
+}
+.logo span{color:#18aee6}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+}
+.hero{
+    text-align:center;
+    padding:90px 20px;
+    background:radial-gradient(circle,#073b42,#061014);
+}
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+.hero h1 span{color:#18e6a0}
+.hero p{
+    color:#b8c8cc;
+    margin-bottom:15px;
+    font-size:20px;
+}
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:15px 30px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#18e6a0,#18aee6);
+    color:#001014;
+    text-decoration:none;
+    font-weight:bold;
+}
+section{
+    padding:70px 7%;
+    text-align:center;
+}
+h2{
+    margin-bottom:35px;
+    font-size:36px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.card,.plan,.faq div{
+    background:#0b1b20;
+    border:1px solid #16424a;
+    border-radius:18px;
+    padding:25px;
+}
+.card h3,.plan h3{
+    color:#18e6a0;
+    margin-bottom:10px;
+}
+.plan strong{
+    display:block;
+    font-size:22px;
+    margin:15px 0;
+}
+.faq{
+    max-width:850px;
+    margin:auto;
+    text-align:left;
+}
+.faq div{
+    margin-bottom:15px;
+}
+footer{
+    border-top:1px solid #12343b;
+    padding:35px;
+    text-align:center;
+    color:#8fa1a5;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    z-index:999;
+}
+
+/* CHAT */
+#chat-button{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#229ED9;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    z-index:9999;
+}
+#chat-box{
+    display:none;
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    width:320px;
+    background:#fff;
+    color:#222;
+    border-radius:16px;
+    padding:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,.3);
+    z-index:9999;
+}
+#chat-box h3{
+    margin-bottom:10px;
+}
+#chat-message{
+    width:100%;
+    height:110px;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    resize:none;
+}
+#chat-send{
+    width:100%;
+    margin-top:10px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#229ED9;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+#chat-status{
+    margin-top:8px;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+    nav{display:none}
+    .hero h1{font-size:38px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Bliz<span>Tv</span></div>
+
+<nav>
+<a href="#features">Features</a>
+<a href="#plans">Plans</a>
+<a href="#faq">FAQ</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Your TV. <span>Your World.</span></h1>
+
+<p>Live TV • Movies • Series • Entertainment</p>
+
+<p>Smart TV • Android • iPhone • PC • TV Box</p>
+
+<a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv,%20I%20would%20like%20a%2024h%20free%20test.">
+GET 24H FREE TEST
+</a>
+</section>
+
+<section id="features">
+<h2>Why BlizTv?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📺 Live TV</h3>
+<p>Watch live television anytime, anywhere.</p>
+</div>
+
+<div class="card">
+<h3>🎬 Movies & Series</h3>
+<p>Thousands of movies and TV series.</p>
+</div>
+
+<div class="card">
+<h3>📱 Multi Device</h3>
+<p>Works on Smart TV, Android, iPhone, PC and TV Box.</p>
+</div>
+
+<div class="card">
+<h3>⚡ HD / FHD / UHD</h3>
+<p>High quality streaming where available.</p>
+</div>
+
+<div class="card">
+<h3>💬 24/7 Support</h3>
+<p>Fast customer support whenever you need it.</p>
+</div>
+
+<div class="card">
+<h3>🔧 Easy Setup</h3>
+<p>Quick activation in just a few minutes.</p>
+</div>
+
+</div>
+</section>
+
+<section id="plans">
+<h2>Choose Your Plan</h2>
+
+<div class="cards">
+
+<div class="plan">
+<h3>1 Month</h3>
+<strong>Contact us</strong>
+<a class="btn" href="https://wa.me/420776282242">ORDER</a>
+</div>
+
+<div class="plan">
+<h3>12 Months</h3>
+<strong>Contact us</strong>
+<a class="btn" href="https://wa.me/420776282242">ORDER</a>
+</div>
+
+<div class="plan">
+<h3>24 Months</h3>
+<strong>Contact us</strong>
+<a class="btn" href="https://wa.me/420776282242">ORDER</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Become a Reseller</h2>
+
+<p style="max-width:700px;margin:auto;color:#b8c8cc">
+Start your own IPTV business with the BlizTv reseller panel.
+Contact us for reseller information.
+</p>
+
+<a class="btn" href="https://wa.me/420776282242?text=Hello%20BlizTv,%20I%20am%20interested%20in%20the%20reseller%20program.">
+BECOME A RESELLER
+</a>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+
+<div class="faq">
+
+<div>
+<h3>Can I test BlizTv?</h3>
+<p>Yes. We offer a free 24-hour test.</p>
+</div>
+
+<div>
+<h3>Which devices are supported?</h3>
+<p>Smart TV, Android TV, Android Phone, iPhone, iPad, PC, Mac and TV Box.</p>
+</div>
+
+<div>
+<h3>Do I need a VPN?</h3>
+<p>No. In most countries BlizTv works without VPN.</p>
+</div>
+
+<div>
+<h3>How fast is activation?</h3>
+<p>Usually within a few minutes after payment.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 BlizTv — Live TV, Movies & Series.
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/420776282242?text=Hello%20BlizTv,%20I%20would%20like%20a%2024h%20free%20test.">
+WhatsApp
+</a>
+
+<!-- TELEGRAM CHAT -->
+<button id="chat-button">💬</button>
+
+<div id="chat-box">
+
+<h3>Message BlizTv</h3>
+
+<textarea id="chat-message"
+placeholder="Write your message..."></textarea>
+
+<button id="chat-send">Send Message</button>
+
+<p id="chat-status"></p>
+
+</div>
+
 <script>
-const BOT_TOKEN = "ТУКА_ГО_СТАВИ_BOT_TOKEN";
-const CHAT_ID = "ТУКА_ГО_СТАВИ_CHAT_ID";
+// ====== TELEGRAM SETTINGS ======
+const BOT_TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE";
+const CHAT_ID = "PASTE_YOUR_CHAT_ID_HERE";
+// ===============================
 
 const chatButton = document.getElementById("chat-button");
 const chatBox = document.getElementById("chat-box");
@@ -8,48 +341,55 @@ const sendButton = document.getElementById("chat-send");
 const messageBox = document.getElementById("chat-message");
 const status = document.getElementById("chat-status");
 
-chatButton.onclick = () => {
-  chatBox.style.display =
-    chatBox.style.display === "block" ? "none" : "block";
-};
-
-sendButton.onclick = async () => {
-  const message = messageBox.value.trim();
-
-  if (!message) {
-    status.textContent = "Write a message first.";
-    return;
-  }
-
-  status.textContent = "Sending...";
-
-  const text = "📩 New message from BlizTv website:\n\n" + message;
-
-  try {
-    const response = await fetch(
-      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: text,
-        }),
-      }
-    );
-
-    const result = await response.json();
-
-    if (result.ok) {
-      status.textContent = "Message sent! ✅";
-      messageBox.value = "";
-    } else {
-      status.textContent = "Error sending message.";
+chatButton.addEventListener("click", () => {
+    if(chatBox.style.display === "block"){
+        chatBox.style.display = "none";
+    }else{
+        chatBox.style.display = "block";
     }
-  } catch {
-    status.textContent = "Connection error.";
-  }
-};
+});
+
+sendButton.addEventListener("click", async () => {
+
+    const message = messageBox.value.trim();
+
+    if(message===""){
+        status.innerHTML="Please write a message.";
+        return;
+    }
+
+    status.innerHTML="Sending...";
+
+    try{
+
+        const response = await fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                chat_id:CHAT_ID,
+                text:`📩 New BlizTv Website Message:%0A%0A${message}`
+            })
+        });
+
+        const result = await response.json();
+
+        if(result.ok){
+            status.innerHTML="✅ Message sent!";
+            messageBox.value="";
+        }else{
+            status.innerHTML="❌ Telegram error.";
+        }
+
+    }catch(e){
+        status.innerHTML="❌ Connection error.";
+    }
+
+});
 </script>
+
+</body>
+</html>
