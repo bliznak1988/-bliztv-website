@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,6 @@
 <title>BlizTv – Live TV, Movies & Series</title>
 
 <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -134,42 +132,6 @@ h2 {
 
 .card p {
     color: #b9c9cc;
-}
-
-/* VIDEO */
-.video-section {
-    padding: 70px 7%;
-    text-align: center;
-    background: #061014;
-}
-
-.video-section h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.video-section p {
-    color: #b9c9cc;
-    margin-bottom: 30px;
-}
-
-.video-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #0b1b20;
-    border: 1px solid #16424a;
-    border-radius: 20px;
-    padding: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-}
-
-.video-container video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 14px;
-    background: #000;
 }
 
 /* PLANS */
@@ -368,19 +330,6 @@ footer {
         font-size: 32px;
     }
 
-    .video-section {
-        padding: 55px 20px;
-    }
-
-    .video-container {
-        padding: 7px;
-        border-radius: 15px;
-    }
-
-    .video-container video {
-        border-radius: 10px;
-    }
-
     #chat-box {
         right: 15px;
         left: 15px;
@@ -398,7 +347,6 @@ footer {
         bottom: 15px;
     }
 }
-
 </style>
 </head>
 
@@ -413,7 +361,6 @@ footer {
 
     <nav>
         <a href="#features">Features</a>
-        <a href="#video">Video</a>
         <a href="#plans">Plans</a>
         <a href="#faq">FAQ</a>
     </nav>
@@ -495,32 +442,6 @@ footer {
                 Simple installation and fast activation.
             </p>
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- VIDEO -->
-<section id="video" class="video-section">
-
-    <h2>Watch BlizTv</h2>
-
-    <p>
-        See how BlizTv works and enjoy your entertainment on any device.
-    </p>
-
-    <div class="video-container">
-
-        <video
-            controls
-            playsinline
-            preload="metadata"
-        >
-            <source src="video.mp4" type="video/mp4">
-
-            Your browser does not support the video tag.
-        </video>
 
     </div>
 
@@ -756,14 +677,12 @@ chatButton.addEventListener("click", function () {
     }
 
 });
-
-
 const sessionId =
     localStorage.getItem("bliztv_session_id") ||
     crypto.randomUUID();
 
 localStorage.setItem("bliztv_session_id", sessionId);
-
+    
 
 /* =====================================
    SEND MESSAGE TO TELEGRAM
@@ -774,10 +693,7 @@ sendButton.addEventListener("click", async function () {
     const message = messageBox.value.trim();
 
     if (!message) {
-
-        status.textContent =
-            "Please write a message.";
-
+        status.textContent = "Please write a message.";
         return;
     }
 
@@ -794,9 +710,10 @@ sendButton.addEventListener("click", async function () {
                     "Content-Type": "application/json"
                 },
 
-                body: JSON.stringify({
-                    message: message,
-                    sessionId: sessionId
+               body: JSON.stringify({
+    message: message,
+    sessionId: sessionId
+})
                 })
             }
         );
@@ -830,4 +747,3 @@ sendButton.addEventListener("click", async function () {
 
 </body>
 </html>
-```
