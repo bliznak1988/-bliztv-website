@@ -2,761 +2,287 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BlizTv - Live TV, Movies, Series and Sports">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BlizTv — Your TV. Your World.</title>
 
 <style>
-:root{
-  --bg:#020b18;
-  --panel:#061426;
-  --line:#0b4661;
-  --cyan:#00eaff;
-  --green:#00ff68;
-  --text:#f4f8ff;
-  --muted:#b8c5d5;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  color:var(--text);
-  background:
-    radial-gradient(circle at 78% 20%,rgba(0,115,255,.18),transparent 35%),
-    radial-gradient(circle at 25% 35%,rgba(0,255,170,.08),transparent 28%),
-    var(--bg);
-  font-family:Arial,Helvetica,sans-serif;
+margin:0;background:#020b18;color:#fff;
+font-family:Arial,Helvetica,sans-serif;
 }
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-.container{
-  width:min(calc(100% - 34px),1000px);
-  margin:auto;
-}
-
-/* ================= HEADER ================= */
+a{text-decoration:none;color:inherit}
+.container{width:min(1000px,calc(100% - 34px));margin:auto}
 
 header{
-  height:64px;
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(2,11,24,.95);
-  border-bottom:1px solid rgba(0,234,255,.12);
-  backdrop-filter:blur(12px);
+position:sticky;top:0;z-index:100;
+background:rgba(2,11,24,.96);
+border-bottom:1px solid #12344a;
+backdrop-filter:blur(12px)
 }
-
 .nav{
-  height:64px;
-  display:flex;
-  align-items:center;
-  gap:28px;
+min-height:64px;display:flex;align-items:center;gap:25px
 }
-
 .logo{
-  font-weight:1000;
-  font-style:italic;
-  line-height:.75;
-  font-size:22px;
-  letter-spacing:-2px;
-  width:105px;
-  text-shadow:0 0 10px rgba(0,255,255,.7);
+font-size:21px;font-weight:1000;font-style:italic;
+line-height:.72;letter-spacing:-2px;
+color:#12eaff;text-shadow:0 0 12px #00eaff;
+width:100px
 }
+.logo b{color:#19ff45}
+.logo small{display:block;margin-left:15px;color:#00eaff;font-size:12px}
 
-.logo span:nth-child(1){
-  color:#20eaff;
-}
-
-.logo span:nth-child(2),
-.logo span:nth-child(3){
-  color:#00ff55;
-}
-
-.logo small{
-  display:block;
-  color:#19f5f5;
-  font-size:12px;
-  letter-spacing:0;
-  margin-left:16px;
-}
-
-nav{
-  display:flex;
-  align-items:center;
-  gap:27px;
-  flex:1;
-}
-
+nav{display:flex;gap:25px;flex:1}
 nav a{
-  font-size:12px;
-  font-weight:700;
-  color:#d9e5f3;
-  padding:22px 0;
+font-size:12px;font-weight:bold;padding:23px 0;color:#dce7f4
 }
-
-nav a.active,
-nav a:hover{
-  color:#00ffbd;
-  border-bottom:2px solid #00ffbd;
+nav a:hover,nav a.active{
+color:#00ff9d;border-bottom:2px solid #00ff9d
 }
 
 .wa{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  border:1px solid var(--green);
-  border-radius:28px;
-  padding:10px 20px;
-  color:#fff;
-  font-weight:800;
-  font-size:12px;
+display:inline-block;border:1px solid #00ff68;
+border-radius:30px;padding:10px 19px;
+font-size:12px;font-weight:bold
 }
-
-.wa:hover{
-  background:rgba(0,255,104,.1);
-}
-
-/* ================= HERO ================= */
+.wa:hover{background:#00ff6818}
 
 .hero{
-  min-height:430px;
-  display:grid;
-  grid-template-columns:43% 57%;
-  align-items:center;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(2,11,24,.95) 0%,
-      rgba(2,18,38,.82) 44%,
-      rgba(0,55,110,.36)
-    ),
-    radial-gradient(
-      circle at 75% 45%,
-      #075aa3,
-      transparent 42%
-    );
-  border-bottom:1px solid rgba(0,234,255,.08);
-  overflow:hidden;
+min-height:430px;
+display:grid;grid-template-columns:44% 56%;
+align-items:center;
+background:
+linear-gradient(90deg,#020b18f5,#031b35c9,#0050a044),
+radial-gradient(circle at 75% 45%,#0867b8,transparent 45%);
+overflow:hidden
 }
 
-.hero-copy{
-  padding:42px 0;
-}
+.hero-copy{padding:40px 0}
 
 .big-logo{
-  font-weight:1000;
-  font-style:italic;
-  line-height:.72;
-  font-size:70px;
-  letter-spacing:-7px;
-  width:max-content;
-  color:#10ecff;
-  text-shadow:
-    0 0 9px #00eaff,
-    0 0 28px rgba(0,255,100,.28);
-  margin-bottom:26px;
+font-size:68px;font-weight:1000;font-style:italic;
+line-height:.72;letter-spacing:-7px;
+color:#10eaff;text-shadow:0 0 10px #00eaff,0 0 30px #00ff6633;
+margin-bottom:27px
 }
+.big-logo span{color:#17ff45}
 
-.big-logo .g{
-  color:#16ff3d;
-}
+h1{font-size:36px;line-height:.98;margin:0 0 10px}
+h1 span{color:#00ff70}
 
-h1{
-  font-size:36px;
-  line-height:.98;
-  margin:0 0 9px;
-  letter-spacing:-1.5px;
-}
+.tagline{font-size:17px;font-weight:bold;margin-bottom:12px}
+.tagline span{color:#00f6a8}
 
-h1 span{
-  color:#00ff75;
-}
-
-.tagline{
-  font-size:17px;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.tagline span{
-  color:#00f6a8;
-}
-
-.hero p{
-  font-size:14px;
-  line-height:1.5;
-  color:#e3ebf6;
-  margin:0 0 20px;
-}
+.hero p{font-size:14px;line-height:1.5;margin-bottom:20px}
 
 .hero-btn{
-  display:inline-flex;
-  background:linear-gradient(90deg,#08b8ff,#00ff63);
-  color:#fff;
-  padding:13px 23px;
-  border-radius:28px;
-  font-weight:900;
-  font-size:13px;
+display:inline-block;
+background:linear-gradient(90deg,#08b8ff,#00ff63);
+padding:13px 23px;border-radius:30px;font-size:13px;font-weight:900
 }
 
-/* ================= TV ================= */
-
-.hero-visual{
-  position:relative;
-  min-height:430px;
-}
+.hero-visual{position:relative;min-height:430px}
 
 .tv{
-  position:absolute;
-  right:0;
-  top:45px;
-  width:95%;
-  height:280px;
-  border:8px solid #09101b;
-  border-radius:2px;
-  background:linear-gradient(135deg,#071d37,#020914);
-  box-shadow:
-    0 20px 45px rgba(0,0,0,.65),
-    0 0 45px rgba(0,130,255,.16);
-  padding:24px;
+position:absolute;right:0;top:45px;width:95%;height:280px;
+background:linear-gradient(135deg,#071d37,#020914);
+border:8px solid #090f19;
+padding:24px;
+box-shadow:0 20px 45px #000b,0 0 45px #0080ff29
 }
 
-.screen-nav{
-  display:flex;
-  gap:12px;
-  margin-bottom:14px;
-}
-
+.screen-nav{display:flex;gap:12px;margin-bottom:14px}
 .screen-btn{
-  flex:1;
-  background:#071c35;
-  border:1px solid rgba(0,234,255,.12);
-  padding:10px 4px;
-  text-align:center;
-  border-radius:5px;
-  font-size:10px;
-  font-weight:700;
+flex:1;background:#071c35;border:1px solid #17405b;
+padding:10px 3px;text-align:center;border-radius:5px;
+font-size:10px;font-weight:bold
 }
-
-.screen-btn.active{
-  border-color:#00eaff;
-  box-shadow:0 0 12px rgba(0,234,255,.15);
-}
+.screen-btn.active{border-color:#00eaff;box-shadow:0 0 12px #00eaff33}
 
 .screen-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
+display:grid;grid-template-columns:repeat(4,1fr);gap:7px
 }
-
 .poster{
-  height:110px;
-  border-radius:4px;
-  overflow:hidden;
-  display:flex;
-  align-items:flex-end;
-  padding:8px;
-  font-size:12px;
-  font-weight:900;
-  background:linear-gradient(145deg,#142e53,#7a1b16 48%,#050a12);
-  text-shadow:0 2px 4px #000;
+height:110px;border-radius:4px;padding:8px;
+display:flex;align-items:flex-end;
+font-size:12px;font-weight:900;
+background:linear-gradient(145deg,#142e53,#7a1b16,#050a12);
+text-shadow:0 2px 5px #000
 }
-
-.poster:nth-child(2){
-  background:linear-gradient(145deg,#1a202b,#47545d,#080b11);
-}
-
-.poster:nth-child(3){
-  background:linear-gradient(145deg,#26142e,#6c1b55,#071016);
-}
-
-.poster:nth-child(4){
-  background:linear-gradient(145deg,#092c55,#2364a4,#05101c);
-}
-
-/* ================= DEVICES ================= */
+.poster:nth-child(2){background:linear-gradient(145deg,#1a202b,#47545d,#080b11)}
+.poster:nth-child(3){background:linear-gradient(145deg,#26142e,#6c1b55,#071016)}
+.poster:nth-child(4){background:linear-gradient(145deg,#092c55,#2364a4,#05101c)}
 
 .devices{
-  position:absolute;
-  right:12%;
-  bottom:6px;
-  display:flex;
-  align-items:end;
-  gap:10px;
+position:absolute;right:12%;bottom:5px;
+display:flex;align-items:end;gap:10px
 }
-
 .device{
-  background:#071321;
-  border:3px solid #17283c;
-  border-radius:7px;
-  box-shadow:0 8px 20px #000;
+background:#071321;border:3px solid #17283c;
+border-radius:7px;box-shadow:0 8px 20px #000
 }
-
-.laptop{
-  width:180px;
-  height:95px;
-}
-
-.tablet{
-  width:100px;
-  height:72px;
-}
-
-.phone{
-  width:48px;
-  height:82px;
-}
-
+.laptop{width:180px;height:95px}
+.tablet{width:100px;height:72px}
+.phone{width:48px;height:82px}
 .device-screen{
-  margin:7px;
-  height:calc(100% - 14px);
-  border-radius:3px;
-  background:linear-gradient(135deg,#102f52,#051326);
-  padding:7px;
+margin:7px;height:calc(100% - 14px);
+background:linear-gradient(135deg,#102f52,#051326);
+padding:7px
 }
+.mini{height:9px;background:#123d67;margin-bottom:5px}
+.mini.w{width:72%}
 
-.mini{
-  height:9px;
-  background:#123d67;
-  margin-bottom:5px;
-  border-radius:3px;
-}
-
-.mini.w{
-  width:72%;
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-  padding:18px 0;
-}
-
-.section-title{
-  text-align:center;
-  font-size:26px;
-  margin:0 0 18px;
-}
-
-.section-title span{
-  color:#00ff9d;
-}
-
-/* ================= FEATURES ================= */
+section{padding:20px 0}
+.section-title{text-align:center;font-size:27px;margin:0 0 20px}
+.section-title span{color:#00ff9d}
 
 .features{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  border-bottom:1px solid rgba(120,180,220,.15);
-  padding-bottom:18px;
+display:grid;grid-template-columns:repeat(6,1fr);
+border-bottom:1px solid #163447;padding-bottom:20px
 }
-
-.feature{
-  text-align:center;
-  padding:4px 12px;
-  border-right:1px solid rgba(100,180,220,.18);
-}
-
-.feature:last-child{
-  border:0;
-}
-
-.icon{
-  font-size:27px;
-  margin-bottom:7px;
-  color:#00f5d4;
-}
-
-.feature h3{
-  font-size:13px;
-  margin:0 0 8px;
-}
-
-.feature p{
-  font-size:11px;
-  line-height:1.4;
-  color:#d3dce8;
-  margin:0;
-}
-
-/* ================= CONTENT ================= */
+.feature{text-align:center;padding:5px 12px;border-right:1px solid #173a4d}
+.feature:last-child{border:0}
+.icon{font-size:27px;color:#00f5d4;margin-bottom:7px}
+.feature h3{font-size:13px;margin:0 0 8px}
+.feature p{font-size:11px;line-height:1.4;color:#d3dce8;margin:0}
 
 .content-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px
 }
-
 .content-card{
-  height:115px;
-  border:1px solid #15536d;
-  border-radius:7px;
-  overflow:hidden;
-  position:relative;
-  background:linear-gradient(135deg,#103b5e,#061322 65%);
+height:115px;border:1px solid #15536d;border-radius:7px;
+position:relative;overflow:hidden;
+background:linear-gradient(135deg,#103b5e,#061322)
 }
-
-.content-card:nth-child(2){
-  background:linear-gradient(135deg,#26303e,#71231d,#0b1621);
-}
-
-.content-card:nth-child(3){
-  background:linear-gradient(135deg,#2b3440,#121c29,#5d2d27);
-}
-
-.content-card:nth-child(4){
-  background:linear-gradient(135deg,#082c52,#0c1725);
-}
-
-.content-card .art{
-  font-size:27px;
-  font-weight:1000;
-  padding:18px 12px;
-  text-shadow:0 2px 6px #000;
-}
-
+.content-card:nth-child(2){background:linear-gradient(135deg,#26303e,#71231d,#0b1621)}
+.content-card:nth-child(3){background:linear-gradient(135deg,#2b3440,#121c29,#5d2d27)}
+.content-card:nth-child(4){background:linear-gradient(135deg,#082c52,#0c1725)}
+.art{font-size:27px;font-weight:1000;padding:18px 12px}
 .pill{
-  position:absolute;
-  bottom:0;
-  left:10%;
-  width:80%;
-  background:linear-gradient(90deg,#067cff,#00ff61);
-  border-radius:18px;
-  text-align:center;
-  padding:7px;
-  font-size:12px;
-  font-weight:900;
+position:absolute;bottom:0;left:10%;width:80%;
+background:linear-gradient(90deg,#067cff,#00ff61);
+border-radius:20px;text-align:center;padding:7px;
+font-size:12px;font-weight:900
 }
-
-/* ================= PLANS ================= */
 
 .plans{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:20px
 }
-
 .plan{
-  border:1px solid #16829a;
-  border-radius:9px;
-  padding:12px 20px 13px;
-  background:linear-gradient(
-    145deg,
-    rgba(3,20,38,.9),
-    rgba(2,10,23,.85)
-  );
-  text-align:center;
+border:1px solid #16829a;border-radius:9px;
+padding:13px 20px;
+background:#031323;text-align:center
 }
-
-.plan h3{
-  margin:0;
-  color:#00ff9f;
-  font-size:20px;
-}
-
-.plan .price{
-  font-size:14px;
-  font-weight:800;
-  margin:4px 0 10px;
-}
-
+.plan h3{margin:0;color:#00ff9f;font-size:20px}
+.price{font-size:14px;font-weight:bold;margin:5px 0 10px}
 .plan ul{
-  list-style:none;
-  text-align:left;
-  margin:0 0 11px;
-  padding:0;
-  font-size:12px;
-  line-height:1.9;
+list-style:none;text-align:left;padding:0;margin:0 0 12px;
+font-size:12px;line-height:1.9
 }
-
 .plan li:before{
-  content:"✓";
-  color:#00ff67;
-  font-weight:900;
-  margin-right:9px;
+content:"✓";color:#00ff67;font-weight:bold;margin-right:9px
 }
-
 .order{
-  display:block;
-  background:linear-gradient(90deg,#09baff,#00f45e);
-  border-radius:22px;
-  padding:11px;
-  font-size:11px;
-  font-weight:900;
+display:block;background:linear-gradient(90deg,#09baff,#00f45e);
+border-radius:22px;padding:11px;font-size:11px;font-weight:900
 }
-
-/* ================= RESELLER + FAQ ================= */
 
 .bottom-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  margin-top:5px;
+display:grid;grid-template-columns:1fr 1fr;gap:25px
 }
-
 .reseller{
-  min-height:160px;
-  border:1px solid #0d4661;
-  border-radius:9px;
-  padding:20px 26px;
-  background:linear-gradient(
-    135deg,
-    #061a2c,
-    #061020 58%,
-    #07334b
-  );
+min-height:160px;border:1px solid #0d4661;border-radius:9px;
+padding:20px 26px;
+background:linear-gradient(135deg,#061a2c,#061020,#07334b)
 }
+.reseller h2{color:#00ff9f;font-size:21px;margin:0 0 8px}
+.reseller p{font-size:12px;line-height:1.45;margin-bottom:12px}
 
-.reseller h2{
-  color:#00ff9f;
-  font-size:21px;
-  margin:0 0 8px;
-}
-
-.reseller p{
-  font-size:12px;
-  line-height:1.45;
-  margin:0 0 12px;
-  max-width:330px;
-}
-
-.faq h2{
-  font-size:18px;
-  margin:0 0 8px;
-}
-
+.faq h2{font-size:18px;margin:0 0 8px}
 .faq-item{
-  background:#071a2e;
-  border:1px solid #123955;
-  padding:10px 12px;
-  margin:4px 0;
-  font-size:11px;
-  font-weight:700;
-  display:flex;
-  justify-content:space-between;
+background:#071a2e;border:1px solid #123955;
+padding:10px 12px;margin:4px 0;
+font-size:11px;font-weight:bold;
+display:flex;justify-content:space-between
 }
-
-/* ================= FOOTER ================= */
 
 footer{
-  border-top:1px solid rgba(0,234,255,.12);
-  padding:16px 0;
-  color:#d8e1ed;
-  font-size:11px;
+border-top:1px solid #12344a;padding:17px 0;font-size:11px
 }
-
 footer .container{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+display:flex;justify-content:space-between;align-items:center
 }
+.footer-wa{color:#00ff7b;font-weight:bold}
 
-.footer-wa{
-  color:#00ff7b;
-  font-weight:800;
-}
-
-/* ================= TABLET ================= */
-
+/* TABLET */
 @media(max-width:850px){
-
-  nav{
-    gap:13px;
-  }
-
-  .nav{
-    gap:10px;
-  }
-
-  .wa{
-    padding:8px 11px;
-  }
-
-  .hero{
-    grid-template-columns:1fr;
-  }
-
-  .hero-copy{
-    padding:35px 0 15px;
-  }
-
-  .hero-visual{
-    min-height:350px;
-  }
-
-  .tv{
-    left:4%;
-    right:4%;
-    width:92%;
-    top:10px;
-    height:235px;
-  }
-
-  .poster{
-    height:85px;
-  }
-
-  .big-logo{
-    font-size:58px;
-  }
-
-  .features{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .feature:nth-child(3){
-    border:0;
-  }
-
-  .content-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .plans{
-    grid-template-columns:1fr;
-  }
-
-  .bottom-grid{
-    grid-template-columns:1fr;
-  }
+.nav{gap:10px}
+nav{gap:13px}
+.hero{grid-template-columns:1fr}
+.hero-copy{padding:35px 0 15px}
+.hero-visual{min-height:350px}
+.tv{left:4%;right:4%;width:92%;top:10px;height:235px}
+.poster{height:85px}
+.features{grid-template-columns:repeat(3,1fr)}
+.content-grid{grid-template-columns:repeat(2,1fr)}
+.plans{grid-template-columns:1fr}
+.bottom-grid{grid-template-columns:1fr}
 }
 
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media(max-width:620px){
-
-  header{
-    height:auto;
-  }
-
-  .nav{
-    height:auto;
-    padding:10px 0;
-    flex-wrap:wrap;
-  }
-
-  .logo{
-    width:75px;
-  }
-
-  nav{
-    order:3;
-    width:100%;
-    overflow:auto;
-    gap:19px;
-  }
-
-  nav a{
-    padding:8px 0;
-    white-space:nowrap;
-  }
-
-  .nav>.wa{
-    margin-left:auto;
-  }
-
-  .hero{
-    min-height:auto;
-  }
-
-  .hero-visual{
-    min-height:260px;
-  }
-
-  .tv{
-    height:175px;
-    padding:10px;
-  }
-
-  .poster{
-    height:62px;
-    font-size:8px;
-  }
-
-  .screen-btn{
-    font-size:7px;
-  }
-
-  .devices{
-    display:none;
-  }
-
-  .big-logo{
-    font-size:49px;
-  }
-
-  .hero h1{
-    font-size:31px;
-  }
-
-  .features{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .feature{
-    border-bottom:1px solid rgba(100,180,220,.15);
-  }
-
-  .content-grid{
-    gap:10px;
-  }
-
-  footer .container{
-    gap:10px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
+.nav{flex-wrap:wrap;padding:10px 0}
+.logo{width:75px}
+nav{
+order:3;width:100%;overflow-x:auto;gap:19px
+}
+nav a{padding:8px 0;white-space:nowrap}
+.nav>.wa{margin-left:auto;padding:8px 11px}
+.big-logo{font-size:49px}
+.hero h1{font-size:31px}
+.hero-visual{min-height:260px}
+.tv{height:175px;padding:10px}
+.poster{height:62px;font-size:8px}
+.screen-btn{font-size:7px}
+.devices{display:none}
+.features{grid-template-columns:repeat(2,1fr)}
+.feature{border-bottom:1px solid #163447}
+.content-grid{gap:10px}
+footer .container{
+flex-direction:column;align-items:flex-start;gap:10px
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
 <div class="container nav">
 
 <a class="logo" href="#home">
-  <span>BLIZ</span><br>
-  <span>BLIZ</span>
-  <small>TV</small>
+BLIZ<br><b>BLIZ</b><small>TV</small>
 </a>
 
 <nav>
-  <a class="active" href="#home">Home</a>
-  <a href="#channels">Channels</a>
-  <a href="#movies">Movies</a>
-  <a href="#series">Series</a>
-  <a href="#plans">Plans</a>
-  <a href="#reseller">Reseller</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
+<a class="active" href="#home">Home</a>
+<a href="#channels">Channels</a>
+<a href="#movies">Movies</a>
+<a href="#series">Series</a>
+<a href="#plans">Plans</a>
+<a href="#reseller">Reseller</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<a class="wa"
-href="https://wa.me/…00"
-target="_blank">
+<a class="wa" href="https://wa.me/…42" target="_blank">
 ◉ &nbsp; Chat on WhatsApp
 </a>
 
 </div>
 </header>
 
-
-<!-- ================= HERO ================= -->
 
 <main id="home">
 
@@ -765,15 +291,12 @@ target="_blank">
 <div class="container hero-copy">
 
 <div class="big-logo">
-  <span>BLIZ</span><br>
-  <span class="g">BLIZ</span><br>
-  <span class="g">TV</span>
+BLIZ<br>
+<span>BLIZ</span><br>
+<span>TV</span>
 </div>
 
-<h1>
-Your TV.<br>
-<span>Your World.</span>
-</h1>
+<h1>Your TV.<br><span>Your World.</span></h1>
 
 <div class="tagline">
 <span>Live TV</span> • Movies • Series • Entertainment
@@ -786,7 +309,7 @@ iPhone, Android, PC and more.
 </p>
 
 <a class="hero-btn"
-href="https://wa.me/…00"
+href="https://wa.me/…42"
 target="_blank">
 ◉ &nbsp; Chat on WhatsApp &nbsp;›
 </a>
@@ -818,29 +341,15 @@ target="_blank">
 
 </div>
 
-
 <div class="screen-grid">
 
-<div class="poster">
-THE<br>BATMAN
-</div>
-
-<div class="poster">
-GAME OF<br>THRONES
-</div>
-
-<div class="poster">
-STRANGER<br>THINGS
-</div>
-
-<div class="poster">
-⚽ SPORTS
-</div>
+<div class="poster">THE<br>BATMAN</div>
+<div class="poster">GAME OF<br>THRONES</div>
+<div class="poster">STRANGER<br>THINGS</div>
+<div class="poster">⚽ SPORTS</div>
 
 </div>
-
 </div>
-
 
 <div class="devices">
 
@@ -867,13 +376,10 @@ STRANGER<br>THINGS
 </div>
 
 </div>
-
 </div>
 
 </section>
 
-
-<!-- ================= WHY BLIZTV ================= -->
 
 <section>
 
@@ -922,13 +428,9 @@ Why <span>BlizTv?</span>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- ================= CONTENT ================= -->
 
 <section id="channels">
 
@@ -941,52 +443,29 @@ Explore <span>Our Content</span>
 <div class="content-grid">
 
 <a class="content-card" href="#channels">
-<div class="art">
-⚽ LIVE<br>SPORTS
-</div>
-<div class="pill">
-📺 &nbsp; Live TV
-</div>
+<div class="art">⚽ LIVE<br>SPORTS</div>
+<div class="pill">📺 &nbsp; Live TV</div>
 </a>
-
 
 <a class="content-card" id="movies" href="#plans">
-<div class="art">
-🎬 MOVIES
-</div>
-<div class="pill">
-🎬 &nbsp; Movies
-</div>
+<div class="art">🎬 MOVIES</div>
+<div class="pill">🎬 &nbsp; Movies</div>
 </a>
-
 
 <a class="content-card" id="series" href="#plans">
-<div class="art">
-🎞️ SERIES
-</div>
-<div class="pill">
-🎞️ &nbsp; Series
-</div>
+<div class="art">🎞️ SERIES</div>
+<div class="pill">🎞️ &nbsp; Series</div>
 </a>
-
 
 <a class="content-card" href="#channels">
-<div class="art">
-🏟️ SPORTS
-</div>
-<div class="pill">
-🌐 &nbsp; Sports
-</div>
+<div class="art">🏟️ SPORTS</div>
+<div class="pill">🌐 &nbsp; Sports</div>
 </a>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- ================= PLANS ================= -->
 
 <section id="plans">
 
@@ -998,15 +477,9 @@ Choose <span>Your Plan</span>
 
 <div class="plans">
 
-
 <div class="plan">
-
 <h3>1 Month</h3>
-
-<div class="price">
-Contact us
-</div>
-
+<div class="price">Contact us</div>
 <ul>
 <li>Live TV</li>
 <li>Movies</li>
@@ -1014,23 +487,15 @@ Contact us
 <li>Multi Device</li>
 <li>Support</li>
 </ul>
-
-<a class="order"
-href="https://wa.me/…0">
+<a class="order" href="https://wa.me/…2">
 ◉ &nbsp; ORDER ON WHATSAPP
 </a>
-
 </div>
 
 
 <div class="plan">
-
 <h3>12 Months</h3>
-
-<div class="price">
-Contact us
-</div>
-
+<div class="price">Contact us</div>
 <ul>
 <li>Live TV</li>
 <li>Movies</li>
@@ -1038,23 +503,15 @@ Contact us
 <li>Multi Device</li>
 <li>Support</li>
 </ul>
-
-<a class="order"
-href="https://wa.me/…0">
+<a class="order" href="https://wa.me/…2">
 ◉ &nbsp; ORDER ON WHATSAPP
 </a>
-
 </div>
 
 
 <div class="plan">
-
 <h3>24 Months</h3>
-
-<div class="price">
-Contact us
-</div>
-
+<div class="price">Contact us</div>
 <ul>
 <li>Live TV</li>
 <li>Movies</li>
@@ -1062,33 +519,23 @@ Contact us
 <li>Multi Device</li>
 <li>Support</li>
 </ul>
-
-<a class="order"
-href="https://wa.me/…0">
+<a class="order" href="https://wa.me/…2">
 ◉ &nbsp; ORDER ON WHATSAPP
 </a>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-
-<!-- ================= RESELLER + FAQ ================= -->
 
 <section id="reseller">
 
 <div class="container bottom-grid">
 
-
 <div class="reseller">
 
-<h2>
-👥 &nbsp; Reseller Program
-</h2>
+<h2>👥 &nbsp; Reseller Program</h2>
 
 <p>
 Interested in becoming a BlizTv reseller?
@@ -1098,7 +545,7 @@ and available options.
 </p>
 
 <a class="wa"
-href="https://wa.me/…00"
+href="https://wa.me/…42"
 target="_blank">
 ◉ &nbsp; Chat on WhatsApp
 </a>
@@ -1108,56 +555,44 @@ target="_blank">
 
 <div class="faq" id="faq">
 
-<h2>
-Frequently Asked Questions
-</h2>
+<h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
-Can I test BlizTv?
-<span>+</span>
+Can I test BlizTv? <span>+</span>
 </div>
 
 <div class="faq-item">
-Which devices are supported?
-<span>+</span>
+Which devices are supported? <span>+</span>
 </div>
 
 <div class="faq-item">
-How do I order?
-<span>+</span>
+How do I order? <span>+</span>
 </div>
 
 <div class="faq-item">
-Do you provide setup help?
-<span>+</span>
+Do you provide setup help? <span>+</span>
 </div>
 
 <div class="faq-item">
-How can I contact BlizTv?
-<span>+</span>
+How can I contact BlizTv? <span>+</span>
 </div>
 
 </div>
 
 </div>
-
 </section>
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
-
 <footer id="contact">
 
 <div class="container">
 
-<span>
-© 2026 BlizTv. All rights reserved.
-</span>
+<span>© 2026 BlizTv. All rights reserved.</span>
 
 <a class="footer-wa"
-href="https://wa.me/…0">
+href="https://wa.me/…2">
 ◉ &nbsp; Chat on WhatsApp
 </a>
 
