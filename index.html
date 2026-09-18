@@ -279,3 +279,138 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     <div>
       <h3>Which devices are supported?</h
+                                        <!-- CHAT -->
+<style>
+#chat-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: #229ED9;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#chat-box {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.25);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+#chat-message {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+#chat-send {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #229ED9;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
+<button id="chat-button">💬</button>
+
+<div id="chat-box">
+  <h3>Message us</h3>
+
+  <textarea id="chat-message" placeholder="Write your message..."></textarea>
+
+  <button id="chat-send">Send</button>
+
+  <p id="chat-status"></p>
+</div>
+
+<script>
+const chatButton = document.getElementById("chat-button");
+const chatBox = document.getElementById("chat-box");
+const sendButton = document.getElementById("chat-send");
+const messageBox = document.getElementById("chat-message");
+const status = document.getElementById("chat-status");
+
+chatButton.onclick = function () {
+  chatBox.style.display =
+    chatBox.style.display === "block" ? "none" : "block";
+};
+
+sendButton.onclick = async function () {
+  const message = messageBox.value.trim();
+
+  if (!message) {
+    status.textContent = "Write a message first.";
+    return;
+  }
+
+  status.textContent = "Sending...";
+
+  try {
+    const response = await fetch("/api/telegram", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: message })
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.ok) {
+      status.textContent = "Message sent! ✅";
+      messageBox.value = "";
+    } else {
+      status.textContent = "Could not send message.";
+    }
+  } catch (error) {
+    status.textContent = "Connection error.";
+  }
+};
+</script>
+
+---------- Původní e-mail ----------
+Od: dejannakovski@seznam.cz
+Komu: dejannakovski@seznam.cz
+Datum: 18.09.2026 14:01:34
+Předmět: Re:
+
+  Interested in becoming a BlizTv reseller?
+    Contact us for reseller information and available options.
+  </p>
+  <a class="btn" href="https://wa.me/….">
+    BECOME A RESELLER
+  </a>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+
+  <div class="faq">
+    <div>
+      <h3>Can I test BlizTv?</h3>
+      <p>Yes. Contact us for a free 24-hour test.</p>
+    </div>
+
+    <div>
+      <h3>Which devices are supported?</h
