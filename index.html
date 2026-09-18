@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +44,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     margin-left: 25px;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -91,10 +93,12 @@ nav a:hover {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn:hover {
     opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 /* SECTIONS */
@@ -123,6 +127,12 @@ h2 {
     border: 1px solid #16424a;
     border-radius: 18px;
     padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #18e6a0;
 }
 
 .card h3 {
@@ -132,6 +142,43 @@ h2 {
 
 .card p {
     color: #b9c9cc;
+}
+
+/* VIDEO */
+.video-section {
+    padding: 70px 7%;
+    text-align: center;
+    background: #061014;
+}
+
+.video-section h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.video-section p {
+    color: #b9c9cc;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #0b1b20;
+    border: 1px solid #16424a;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: block;
+    border-radius: 14px;
+    background: #000;
 }
 
 /* PLANS */
@@ -209,45 +256,30 @@ footer {
     position: fixed;
     right: 20px;
     bottom: 20px;
-
     width: 60px;
     height: 60px;
-
     border: none;
     border-radius: 50%;
-
     background: #229ED9;
     color: white;
-
     font-size: 28px;
-
     cursor: pointer;
-
     z-index: 99999;
-
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* TELEGRAM CHAT BOX */
 #chat-box {
     display: none;
-
     position: fixed;
-
     right: 20px;
     bottom: 90px;
-
     width: 320px;
-
     background: white;
     color: #222;
-
     border-radius: 15px;
-
     padding: 18px;
-
     box-shadow: 0 5px 25px rgba(0,0,0,0.35);
-
     z-index: 99999;
 }
 
@@ -259,34 +291,24 @@ footer {
 #chat-message {
     width: 100%;
     height: 110px;
-
     padding: 10px;
-
     border: 1px solid #ccc;
     border-radius: 8px;
-
     resize: none;
-
     font-family: Arial, sans-serif;
     font-size: 15px;
 }
 
 #chat-send {
     width: 100%;
-
     margin-top: 10px;
-
     padding: 12px;
-
     border: none;
     border-radius: 8px;
-
     background: #229ED9;
     color: white;
-
     font-size: 16px;
     font-weight: bold;
-
     cursor: pointer;
 }
 
@@ -330,6 +352,20 @@ footer {
         font-size: 32px;
     }
 
+    .video-section {
+        padding: 55px 20px;
+    }
+
+    .video-container {
+        padding: 7px;
+        border-radius: 15px;
+    }
+
+    .video-container video {
+        border-radius: 10px;
+        min-height: 200px;
+    }
+
     #chat-box {
         right: 15px;
         left: 15px;
@@ -361,6 +397,7 @@ footer {
 
     <nav>
         <a href="#features">Features</a>
+        <a href="#video">Video</a>
         <a href="#plans">Plans</a>
         <a href="#faq">FAQ</a>
     </nav>
@@ -442,6 +479,42 @@ footer {
                 Simple installation and fast activation.
             </p>
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO -->
+<section id="video" class="video-section">
+
+    <h2>Watch BlizTv</h2>
+
+    <p>
+        See how BlizTv works and enjoy your entertainment on any device.
+    </p>
+
+    <div class="video-container">
+
+        <!--
+        IMPORTANT:
+        Put video.mp4 in the SAME folder as index.html
+        -->
+
+        <video
+            controls
+            playsinline
+            preload="metadata"
+        >
+
+            <source
+                src="./video.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+
+        </video>
 
     </div>
 
@@ -677,73 +750,93 @@ chatButton.addEventListener("click", function () {
     }
 
 });
+
+
+/* =====================================
+   SESSION ID
+   ===================================== */
+
 const sessionId =
     localStorage.getItem("bliztv_session_id") ||
     crypto.randomUUID();
 
-localStorage.setItem("bliztv_session_id", sessionId);
-    
+localStorage.setItem(
+    "bliztv_session_id",
+    sessionId
+);
+
 
 /* =====================================
-   SEND MESSAGE TO TELEGRAM
+   SEND MESSAGE
    ===================================== */
 
-sendButton.addEventListener("click", async function () {
+sendButton.addEventListener(
+    "click",
+    async function () {
 
-    const message = messageBox.value.trim();
+        const message =
+            messageBox.value.trim();
 
-    if (!message) {
-        status.textContent = "Please write a message.";
-        return;
-    }
+        if (!message) {
 
-    status.textContent = "Sending...";
+            status.textContent =
+                "Please write a message.";
 
-    try {
+            return;
+        }
 
-        const response = await fetch(
-            "https://bliztv-telegram.iptv-bliz.workers.dev/",
-            {
-                method: "POST",
+        status.textContent =
+            "Sending...";
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+        try {
 
-               body: JSON.stringify({
-    message: message,
-    sessionId: sessionId
-})
-                })
+            const response =
+                await fetch(
+                    "https://bliztv-telegram.iptv-bliz.workers.dev/",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            message: message,
+                            sessionId: sessionId
+                        })
+                    }
+                );
+
+            const result =
+                await response.json();
+
+            if (result.ok) {
+
+                status.textContent =
+                    "Message sent successfully!";
+
+                messageBox.value = "";
+
+            } else {
+
+                status.textContent =
+                    "Error sending message.";
+
             }
-        );
 
-        const result = await response.json();
-
-        if (result.ok) {
+        } catch (error) {
 
             status.textContent =
-                "Message sent successfully!";
-
-            messageBox.value = "";
-
-        } else {
-
-            status.textContent =
-                "Error sending message.";
+                "Connection error. Please try again.";
 
         }
 
-    } catch (error) {
-
-        status.textContent =
-            "Connection error. Please try again.";
-
     }
-
-});
+);
 
 </script>
 
 </body>
 </html>
+```
