@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BlizTv – Live TV, Movies & Series</title>
+
+<!-- Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM3VVWPZNR"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GM3VVWPZNR');
+</script>
 
 <style>
 * {
@@ -20,7 +32,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
 header {
     padding: 22px 7%;
     display: flex;
@@ -50,15 +61,10 @@ nav a:hover {
     color: #18e6a0;
 }
 
-/* HERO */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: radial-gradient(
-        circle at center,
-        #073b42 0,
-        #061014 65%
-    );
+    background: radial-gradient(circle at center, #073b42 0, #061014 65%);
 }
 
 .hero h1 {
@@ -76,17 +82,12 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 28px;
     border-radius: 30px;
-    background: linear-gradient(
-        90deg,
-        #18e6a0,
-        #18aee6
-    );
+    background: linear-gradient(90deg, #18e6a0, #18aee6);
     color: #001014;
     font-weight: bold;
     text-decoration: none;
@@ -100,7 +101,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* SECTIONS */
 section {
     padding: 70px 7%;
     text-align: center;
@@ -111,13 +111,9 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* CARDS */
 .cards {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(220px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 22px;
 }
 
@@ -143,7 +139,6 @@ h2 {
     color: #b9c9cc;
 }
 
-/* VIDEO */
 .video-section {
     padding: 70px 7%;
     text-align: center;
@@ -180,7 +175,6 @@ h2 {
     background: #000;
 }
 
-/* PLANS */
 .plans {
     max-width: 1100px;
     margin: auto;
@@ -204,7 +198,6 @@ h2 {
     margin: 15px 0;
 }
 
-/* FAQ */
 .faq {
     max-width: 800px;
     margin: auto;
@@ -228,7 +221,6 @@ h2 {
     color: #b9c9cc;
 }
 
-/* FOOTER */
 footer {
     padding: 40px 20px;
     text-align: center;
@@ -236,7 +228,6 @@ footer {
     border-top: 1px solid #12343b;
 }
 
-/* WHATSAPP */
 .whatsapp {
     position: fixed;
     left: 20px;
@@ -250,7 +241,6 @@ footer {
     z-index: 9998;
 }
 
-/* TELEGRAM CHAT BUTTON */
 #chat-button {
     position: fixed;
     right: 20px;
@@ -267,7 +257,6 @@ footer {
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-/* TELEGRAM CHAT BOX */
 #chat-box {
     display: none;
     position: fixed;
@@ -320,9 +309,7 @@ footer {
     font-size: 14px;
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
-
     header {
         padding: 18px 20px;
     }
@@ -383,340 +370,292 @@ footer {
     }
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-
     <div class="logo">
         Bliz<span>Tv</span>
     </div>
 
-    <nav>
-        <a href="#features">Features</a>
-        <a href="#video">Video</a>
-        <a href="#plans">Plans</a>
-        <a href="#faq">FAQ</a>
-    </nav>
+```
+<nav>
+    <a href="#features">Features</a>
+    <a href="#video">Video</a>
+    <a href="#plans">Plans</a>
+    <a href="#faq">FAQ</a>
+</nav>
+```
 
 </header>
 
-
-<!-- HERO -->
 <section class="hero">
 
-    <h1>
-        Your TV.
-        <span>Your World.</span>
-    </h1>
+```
+<h1>
+    Your TV.
+    <span>Your World.</span>
+</h1>
+
+<p>
+    Live TV • Movies • Series • Entertainment
+</p>
+
+<p>
+    Smart TV • iPhone • Android • PC • TV Box
+</p>
 
-    <p>
-        Live TV • Movies • Series • Entertainment
-    </p>
-
-    <p>
-        Smart TV • iPhone • Android • PC • TV Box
-    </p>
-
-    <a
-        class="btn"
-        href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20would%20like%20a%2024h%20free%20test."
-    >
-        GET 24H FREE TEST
-    </a>
-
-</section>
-
-
-<!-- FEATURES -->
-<section id="features">
-
-    <h2>Why BlizTv?</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>📺 Live TV</h3>
-            <p>
-                Enjoy live television wherever you are.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎬 Movies & Series</h3>
-            <p>
-                Entertainment for the whole family.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>📱 Multi Device</h3>
-            <p>
-                Smart TV, iPhone, Android, PC and TV Box.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>⚡ High Quality</h3>
-            <p>
-                HD, FHD and UHD quality where available.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💬 24/7 Support</h3>
-            <p>
-                We are available whenever you need help.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🔧 Easy Setup</h3>
-            <p>
-                Simple installation and fast activation.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- VIDEO -->
-<section id="video" class="video-section">
-
-    <h2>Watch BlizTv</h2>
-
-    <p>
-        See how BlizTv works and enjoy your entertainment on any device.
-    </p>
-
-    <div class="video-container">
-
-        <!--
-        IMPORTANT:
-        Put video.mp4 in the SAME folder as index.html
-        -->
-
-        <video
-            controls
-            playsinline
-            preload="metadata"
-        >
-
-            <source
-                src="./video.mp4"
-                type="video/mp4"
-            >
-
-            Your browser does not support the video tag.
-
-        </video>
-
-    </div>
-
-</section>
-
-
-<!-- PLANS -->
-<section id="plans">
-
-    <h2>Choose Your Plan</h2>
-
-    <div class="cards plans">
-
-        <div class="plan">
-
-            <h3>1 Month</h3>
-
-            <strong>Contact us</strong>
-
-            <a
-                class="btn"
-                href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%201%20month%20plan."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-
-        <div class="plan">
-
-            <h3>12 Months</h3>
-
-            <strong>Contact us</strong>
-
-            <a
-                class="btn"
-                href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%2012%20month%20plan."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-
-        <div class="plan">
-
-            <h3>24 Months</h3>
-
-            <strong>Contact us</strong>
-
-            <a
-                class="btn"
-                href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%2024%20month%20plan."
-            >
-                ORDER
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- RESELLER -->
-<section>
-
-    <h2>Reseller Program</h2>
-
-    <p
-        style="
-        max-width:700px;
-        margin:0 auto 20px;
-        color:#b9c9cc;
-        "
-    >
-        Interested in becoming a BlizTv reseller?
-        Contact us for reseller information and available options.
-    </p>
-
-    <a
-        class="btn"
-        href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%20reseller%20program."
-    >
-        BECOME A RESELLER
-    </a>
-
-</section>
-
-
-<!-- FAQ -->
-<section id="faq">
-
-    <h2>FAQ</h2>
-
-    <div class="faq">
-
-        <div>
-            <h3>Can I test BlizTv?</h3>
-
-            <p>
-                Yes. Contact us for a free 24-hour test.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>Which devices are supported?</h3>
-
-            <p>
-                Smart TV, Android, iPhone, iPad,
-                PC and TV Box.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>How fast is activation?</h3>
-
-            <p>
-                Activation is usually completed quickly
-                after confirmation.
-            </p>
-        </div>
-
-
-        <div>
-            <h3>Do you provide support?</h3>
-
-            <p>
-                Yes. Our support is available to help
-                with setup and activation.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    © 2026 BlizTv — Live TV, Movies & Series.
-
-</footer>
-
-
-<!-- WHATSAPP -->
 <a
-    class="whatsapp"
+    class="btn"
     href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20would%20like%20a%2024h%20free%20test."
 >
-    WhatsApp
+    GET 24H FREE TEST
+</a>
+```
+
+</section>
+
+<section id="features">
+
+```
+<h2>Why BlizTv?</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>📺 Live TV</h3>
+        <p>Enjoy live television wherever you are.</p>
+    </div>
+
+    <div class="card">
+        <h3>🎬 Movies & Series</h3>
+        <p>Entertainment for the whole family.</p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Multi Device</h3>
+        <p>Smart TV, iPhone, Android, PC and TV Box.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ High Quality</h3>
+        <p>HD, FHD and UHD quality where available.</p>
+    </div>
+
+    <div class="card">
+        <h3>💬 24/7 Support</h3>
+        <p>We are available whenever you need help.</p>
+    </div>
+
+    <div class="card">
+        <h3>🔧 Easy Setup</h3>
+        <p>Simple installation and fast activation.</p>
+    </div>
+
+</div>
+```
+
+</section>
+
+<section id="video" class="video-section">
+
+```
+<h2>Watch BlizTv</h2>
+
+<p>
+    See how BlizTv works and enjoy your entertainment on any device.
+</p>
+
+<div class="video-container">
+
+    <video controls playsinline preload="metadata">
+
+        <source
+            src="./video.mp4"
+            type="video/mp4"
+        >
+
+        Your browser does not support the video tag.
+
+    </video>
+
+</div>
+```
+
+</section>
+
+<section id="plans">
+
+```
+<h2>Choose Your Plan</h2>
+
+<div class="cards plans">
+
+    <div class="plan">
+        <h3>1 Month</h3>
+        <strong>Contact us</strong>
+
+        <a
+            class="btn"
+            href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%201%20month%20plan."
+        >
+            ORDER
+        </a>
+    </div>
+
+    <div class="plan">
+        <h3>12 Months</h3>
+        <strong>Contact us</strong>
+
+        <a
+            class="btn"
+            href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%2012%20month%20plan."
+        >
+            ORDER
+        </a>
+    </div>
+
+    <div class="plan">
+        <h3>24 Months</h3>
+        <strong>Contact us</strong>
+
+        <a
+            class="btn"
+            href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%2024%20month%20plan."
+        >
+            ORDER
+        </a>
+    </div>
+
+</div>
+```
+
+</section>
+
+<section>
+
+```
+<h2>Reseller Program</h2>
+
+<p
+    style="
+    max-width:700px;
+    margin:0 auto 20px;
+    color:#b9c9cc;
+    "
+>
+    Interested in becoming a BlizTv reseller?
+    Contact us for reseller information and available options.
+</p>
+
+<a
+    class="btn"
+    href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20am%20interested%20in%20the%20reseller%20program."
+>
+    BECOME A RESELLER
+</a>
+```
+
+</section>
+
+<section id="faq">
+
+```
+<h2>FAQ</h2>
+
+<div class="faq">
+
+    <div>
+        <h3>Can I test BlizTv?</h3>
+        <p>Yes. Contact us for a free 24-hour test.</p>
+    </div>
+
+    <div>
+        <h3>Which devices are supported?</h3>
+        <p>
+            Smart TV, Android, iPhone, iPad,
+            PC and TV Box.
+        </p>
+    </div>
+
+    <div>
+        <h3>How fast is activation?</h3>
+        <p>
+            Activation is usually completed quickly
+            after confirmation.
+        </p>
+    </div>
+
+    <div>
+        <h3>Do you provide support?</h3>
+        <p>
+            Yes. Our support is available to help
+            with setup and activation.
+        </p>
+    </div>
+
+</div>
+```
+
+</section>
+
+<footer>
+    © 2026 BlizTv — Live TV, Movies & Series.
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/420776282242?text=Hello%20BlizTv%2C%20I%20would%20like%20a%2024h%20free%20test."
+
+>
+
+```
+WhatsApp
+```
+
 </a>
 
-
-<!-- TELEGRAM CHAT BUTTON -->
 <button
-    id="chat-button"
-    type="button"
-    aria-label="Open chat"
+id="chat-button"
+type="button"
+aria-label="Open chat"
+
 >
-    💬
+
+```
+💬
+```
+
 </button>
 
-
-<!-- TELEGRAM CHAT WINDOW -->
 <div id="chat-box">
 
-    <h3>Message BlizTv</h3>
+```
+<h3>Message BlizTv</h3>
 
-    <textarea
-        id="chat-message"
-        placeholder="Write your message..."
-    ></textarea>
+<textarea
+    id="chat-message"
+    placeholder="Write your message..."
+></textarea>
 
-    <button
-        id="chat-send"
-        type="button"
-    >
-        Send Message
-    </button>
+<button
+    id="chat-send"
+    type="button"
+>
+    Send Message
+</button>
 
-    <p id="chat-status"></p>
+<p id="chat-status"></p>
+```
 
 </div>
 
-
 <script>
-
-/* =====================================
-   TELEGRAM SETTINGS
-   ===================================== */
 
 const BOT_TOKEN = "";
 const CHAT_ID = "";
-
-
-/* =====================================
-   CHAT OPEN / CLOSE
-   ===================================== */
 
 const chatButton =
     document.getElementById("chat-button");
@@ -733,27 +672,16 @@ const messageBox =
 const status =
     document.getElementById("chat-status");
 
-
 chatButton.addEventListener("click", function () {
 
     if (chatBox.style.display === "block") {
-
         chatBox.style.display = "none";
-
     } else {
-
         chatBox.style.display = "block";
-
         messageBox.focus();
-
     }
 
 });
-
-
-/* =====================================
-   SESSION ID
-   ===================================== */
 
 const sessionId =
     localStorage.getItem("bliztv_session_id") ||
@@ -763,11 +691,6 @@ localStorage.setItem(
     "bliztv_session_id",
     sessionId
 );
-
-
-/* =====================================
-   SEND MESSAGE
-   ===================================== */
 
 sendButton.addEventListener(
     "click",
